@@ -34,7 +34,7 @@ CÁCH THỰC THI CHƯƠNG TRÌNH
 
 GIẢNG VIÊN HƯỚNG DẪN
 
-[NGUYỄN TẤN TOÀN]
+- [NGUYỄN TẤN TOÀN]
 
 ---------------------
 CÀI ĐẶT
