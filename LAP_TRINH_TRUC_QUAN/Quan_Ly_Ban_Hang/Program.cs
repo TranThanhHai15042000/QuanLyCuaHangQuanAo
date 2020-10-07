@@ -16,7 +16,7 @@ namespace Quan_Ly_Ban_Hang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHoaDonBan());
+            Application.Run(new frmMain());
         }
     }
 }
