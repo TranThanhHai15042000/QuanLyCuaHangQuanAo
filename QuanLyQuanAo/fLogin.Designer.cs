@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnOut = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblUseName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,22 +38,12 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnOut
-            // 
-            this.btnOut.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnOut.Location = new System.Drawing.Point(612, 283);
-            this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(128, 62);
-            this.btnOut.TabIndex = 0;
-            this.btnOut.Text = "Thoát";
-            this.btnOut.UseVisualStyleBackColor = true;
-            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
-            // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(600, 30);
+            this.btnLogin.Location = new System.Drawing.Point(450, 24);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(132, 62);
+            this.btnLogin.Size = new System.Drawing.Size(99, 50);
             this.btnLogin.TabIndex = 1;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -64,9 +53,10 @@
             // 
             this.lblUseName.AutoSize = true;
             this.lblUseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUseName.Location = new System.Drawing.Point(62, 21);
+            this.lblUseName.Location = new System.Drawing.Point(46, 17);
+            this.lblUseName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUseName.Name = "lblUseName";
-            this.lblUseName.Size = new System.Drawing.Size(182, 29);
+            this.lblUseName.Size = new System.Drawing.Size(145, 25);
             this.lblUseName.TabIndex = 2;
             this.lblUseName.Text = "Tên đăng nhập";
             this.lblUseName.Click += new System.EventHandler(this.lblUseName_Click);
@@ -78,17 +68,19 @@
             this.panel1.Controls.Add(this.lblPass);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.lblUseName);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(9, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 126);
+            this.panel1.Size = new System.Drawing.Size(582, 102);
             this.panel1.TabIndex = 3;
             // 
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(294, 74);
+            this.txtPass.Location = new System.Drawing.Point(220, 60);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(268, 36);
+            this.txtPass.Size = new System.Drawing.Size(202, 30);
             this.txtPass.TabIndex = 5;
             this.txtPass.UseSystemPasswordChar = true;
             this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
@@ -96,9 +88,10 @@
             // txtUseName
             // 
             this.txtUseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUseName.Location = new System.Drawing.Point(294, 14);
+            this.txtUseName.Location = new System.Drawing.Point(220, 11);
+            this.txtUseName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUseName.Name = "txtUseName";
-            this.txtUseName.Size = new System.Drawing.Size(268, 36);
+            this.txtUseName.Size = new System.Drawing.Size(202, 30);
             this.txtUseName.TabIndex = 4;
             this.txtUseName.TextChanged += new System.EventHandler(this.txtUseName_TextChanged);
             // 
@@ -106,18 +99,20 @@
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(62, 81);
+            this.lblPass.Location = new System.Drawing.Point(46, 66);
+            this.lblPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(117, 29);
+            this.lblPass.Size = new System.Drawing.Size(93, 25);
             this.lblPass.TabIndex = 3;
             this.lblPass.Text = "Mật khẩu";
             this.lblPass.Click += new System.EventHandler(this.lblPass_Click);
             // 
             // btnOder
             // 
-            this.btnOder.Location = new System.Drawing.Point(612, 164);
+            this.btnOder.Location = new System.Drawing.Point(459, 133);
+            this.btnOder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOder.Name = "btnOder";
-            this.btnOder.Size = new System.Drawing.Size(132, 62);
+            this.btnOder.Size = new System.Drawing.Size(99, 50);
             this.btnOder.TabIndex = 7;
             this.btnOder.Text = "Đặt hàng online";
             this.btnOder.UseVisualStyleBackColor = true;
@@ -126,13 +121,12 @@
             // fLogin
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnOut;
-            this.ClientSize = new System.Drawing.Size(769, 394);
+            this.ClientSize = new System.Drawing.Size(577, 320);
             this.Controls.Add(this.btnOder);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnOut);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -145,8 +139,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnOut;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblUseName;
         private System.Windows.Forms.Panel panel1;
