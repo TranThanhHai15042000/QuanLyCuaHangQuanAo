@@ -1,2 +1,0 @@
-C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\QuanLyCuaHangQuanAo\LAP_TRINH_TRUC_QUAN\Class\obj\Debug\Class.csprojAssemblyReference.cache
-C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\QuanLyCuaHangQuanAo\LAP_TRINH_TRUC_QUAN\Class\obj\Debug\Class.csproj.CoreCompileInputs.cache
