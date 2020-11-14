@@ -46,6 +46,8 @@ namespace QuanLyQuanAo
         {
             InitializeComponent();
             random = new Random();
+            Sidepanel.Height = button1.Height;
+            Sidepanel.Top = button1.Top;
         }
 
         //methods
@@ -192,6 +194,79 @@ namespace QuanLyQuanAo
             this.Show();
 
         }
+
+        private void lblTittle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Sidepanel.Height = button1.Height;
+            Sidepanel.Top = button1.Top;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Sidepanel.Height = button4.Height;
+            Sidepanel.Top = button4.Top;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            fKhachHang f = new fKhachHang();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+            Sidepanel.Height = btnCustom.Height;
+            Sidepanel.Top = btnCustom.Top;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            fBill f = new fBill();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+            Sidepanel.Height = btnOrders.Height;
+            Sidepanel.Top = btnOrders.Top;
+        }
+
+        private void btnProduct_Click_1(object sender, EventArgs e)
+        {
+            fCTHang f = new fCTHang();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+            Sidepanel.Height = btnProduct.Height;
+            Sidepanel.Top = btnProduct.Top;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Sidepanel.Height = btnSoQuy.Height;
+            Sidepanel.Top = btnSoQuy.Top;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Sidepanel.Height = btnBaoCao.Height;
+            Sidepanel.Top = btnBaoCao.Top;
+        }
     }
-    
 }

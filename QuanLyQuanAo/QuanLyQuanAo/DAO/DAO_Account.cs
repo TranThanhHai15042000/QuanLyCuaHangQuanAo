@@ -28,7 +28,7 @@ namespace QuanLyQuanAo.DAO
 
         public bool Login(string userName, string passWord)
         {
-            string query = "SELECT *FROM dbo.tblNhanVien WHERE Users = N'" + userName + "' AND Pass= N'" + passWord +"'";
+            string query = "SELECT *FROM dbo.tblUsers WHERE Users = N'" + userName + "' AND Pass= N'" + passWord +"'";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
 
@@ -37,7 +37,7 @@ namespace QuanLyQuanAo.DAO
         
         public DTO_Account GetAccountByUserName(string userName)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("Select *from tblNhanVien where Users = '" + userName + "'");
+            DataTable data = DataProvider.Instance.ExecuteQuery("Select *from tblUsers where Users = '" + userName + "'");
 
             foreach (DataRow item in data.Rows)
             {

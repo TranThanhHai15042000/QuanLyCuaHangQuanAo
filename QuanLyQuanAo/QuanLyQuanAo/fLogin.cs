@@ -70,9 +70,7 @@ namespace QuanLyQuanAo
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
             login();
-
         }
 
         private void txtUseName_Click(object sender, EventArgs e)  
@@ -117,6 +115,16 @@ namespace QuanLyQuanAo
             {
                 login();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUseName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
