@@ -28,94 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtUseName = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.panelUser = new System.Windows.Forms.Panel();
-            this.panelPass = new System.Windows.Forms.Panel();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             this.lblKQ = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ptrUser = new System.Windows.Forms.PictureBox();
-            this.ptrPass = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.txtUseName = new MetroFramework.Controls.MetroTextBox();
+            this.txtPass = new MetroFramework.Controls.MetroTextBox();
+            this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
+            this.btnLogin = new MetroFramework.Controls.MetroButton();
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptrUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptrPass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtUseName
-            // 
-            this.txtUseName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(65)))));
-            this.txtUseName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUseName.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUseName.ForeColor = System.Drawing.Color.White;
-            this.txtUseName.Location = new System.Drawing.Point(81, 250);
-            this.txtUseName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUseName.Name = "txtUseName";
-            this.txtUseName.Size = new System.Drawing.Size(389, 29);
-            this.txtUseName.TabIndex = 1;
-            this.txtUseName.Text = "Username";
-            this.txtUseName.Click += new System.EventHandler(this.txtUseName_Click);
-            this.txtUseName.TextChanged += new System.EventHandler(this.txtUseName_TextChanged);
-            this.txtUseName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUseName_KeyPress);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Gray;
-            this.button1.Location = new System.Drawing.Point(57, 457);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(413, 47);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Sign up";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtPass
-            // 
-            this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(65)))));
-            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPass.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.ForeColor = System.Drawing.Color.White;
-            this.txtPass.Location = new System.Drawing.Point(81, 306);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(389, 29);
-            this.txtPass.TabIndex = 2;
-            this.txtPass.Text = "Password";
-            this.txtPass.UseSystemPasswordChar = true;
-            this.txtPass.Click += new System.EventHandler(this.txtPass_Click);
-            this.txtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPass_KeyPress);
-            // 
-            // panelUser
-            // 
-            this.panelUser.BackColor = System.Drawing.Color.White;
-            this.panelUser.Location = new System.Drawing.Point(57, 284);
-            this.panelUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(413, 1);
-            this.panelUser.TabIndex = 6;
-            // 
-            // panelPass
-            // 
-            this.panelPass.BackColor = System.Drawing.Color.White;
-            this.panelPass.Location = new System.Drawing.Point(57, 341);
-            this.panelPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelPass.Name = "panelPass";
-            this.panelPass.Size = new System.Drawing.Size(413, 1);
-            this.panelPass.TabIndex = 7;
             // 
             // lblKQ
             // 
             this.lblKQ.AutoSize = true;
             this.lblKQ.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKQ.Location = new System.Drawing.Point(161, 346);
+            this.lblKQ.Location = new System.Drawing.Point(161, 354);
             this.lblKQ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKQ.Name = "lblKQ";
             this.lblKQ.Size = new System.Drawing.Size(0, 19);
@@ -123,123 +53,141 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QuanLyQuanAo.Properties.Resources.mr;
-            this.pictureBox1.Location = new System.Drawing.Point(81, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(23, 71);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(367, 199);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.Size = new System.Drawing.Size(142, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // ptrUser
+            // txtUseName
             // 
-            this.ptrUser.Image = global::QuanLyQuanAo.Properties.Resources.User;
-            this.ptrUser.Location = new System.Drawing.Point(57, 254);
-            this.ptrUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ptrUser.Name = "ptrUser";
-            this.ptrUser.Size = new System.Drawing.Size(23, 25);
-            this.ptrUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptrUser.TabIndex = 5;
-            this.ptrUser.TabStop = false;
             // 
-            // ptrPass
             // 
-            this.ptrPass.Image = global::QuanLyQuanAo.Properties.Resources.Pass;
-            this.ptrPass.Location = new System.Drawing.Point(57, 309);
-            this.ptrPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ptrPass.Name = "ptrPass";
-            this.ptrPass.Size = new System.Drawing.Size(23, 25);
-            this.ptrPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptrPass.TabIndex = 5;
-            this.ptrPass.TabStop = false;
             // 
-            // pictureBox2
+            this.txtUseName.CustomButton.Image = null;
+            this.txtUseName.CustomButton.Location = new System.Drawing.Point(267, 2);
+            this.txtUseName.CustomButton.Name = "";
+            this.txtUseName.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtUseName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtUseName.CustomButton.TabIndex = 1;
+            this.txtUseName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtUseName.CustomButton.UseSelectable = true;
+            this.txtUseName.CustomButton.Visible = false;
+            this.txtUseName.DisplayIcon = true;
+            this.txtUseName.Icon = ((System.Drawing.Image)(resources.GetObject("txtUseName.Icon")));
+            this.txtUseName.Lines = new string[0];
+            this.txtUseName.Location = new System.Drawing.Point(215, 71);
+            this.txtUseName.MaxLength = 32767;
+            this.txtUseName.Name = "txtUseName";
+            this.txtUseName.PasswordChar = '\0';
+            this.txtUseName.PromptText = "Enter your user name";
+            this.txtUseName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtUseName.SelectedText = "";
+            this.txtUseName.SelectionLength = 0;
+            this.txtUseName.SelectionStart = 0;
+            this.txtUseName.ShortcutsEnabled = true;
+            this.txtUseName.Size = new System.Drawing.Size(295, 30);
+            this.txtUseName.TabIndex = 0;
+            this.txtUseName.UseSelectable = true;
+            this.txtUseName.WaterMark = "Enter your user name";
+            this.txtUseName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtUseName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+           // this.txtUseName.Click += new System.EventHandler(this.txtUseName_Click);
             // 
-            this.pictureBox2.Image = global::QuanLyQuanAo.Properties.Resources.cancel;
-            this.pictureBox2.Location = new System.Drawing.Point(456, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // txtPass
             // 
-            // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(192, 203);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 45);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "LOGIN";
+            // 
+            // 
+            this.txtPass.CustomButton.Image = null;
+            this.txtPass.CustomButton.Location = new System.Drawing.Point(267, 2);
+            this.txtPass.CustomButton.Name = "";
+            this.txtPass.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtPass.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPass.CustomButton.TabIndex = 1;
+            this.txtPass.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPass.CustomButton.UseSelectable = true;
+            this.txtPass.CustomButton.Visible = false;
+            this.txtPass.DisplayIcon = true;
+            this.txtPass.Icon = ((System.Drawing.Image)(resources.GetObject("txtPass.Icon")));
+            this.txtPass.Lines = new string[0];
+            this.txtPass.Location = new System.Drawing.Point(215, 123);
+            this.txtPass.MaxLength = 32767;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.PromptText = "Enter your password";
+            this.txtPass.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPass.SelectedText = "";
+            this.txtPass.SelectionLength = 0;
+            this.txtPass.SelectionStart = 0;
+            this.txtPass.ShortcutsEnabled = true;
+            this.txtPass.Size = new System.Drawing.Size(295, 30);
+            this.txtPass.TabIndex = 1;
+            this.txtPass.UseSelectable = true;
+            this.txtPass.WaterMark = "Enter your password";
+            this.txtPass.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPass.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            //this.txtPass.Click += new System.EventHandler(this.txtPass_Click);
+            // 
+            // metroCheckBox1
+            // 
+            this.metroCheckBox1.AutoSize = true;
+            this.metroCheckBox1.Location = new System.Drawing.Point(215, 174);
+            this.metroCheckBox1.Name = "metroCheckBox1";
+            this.metroCheckBox1.Size = new System.Drawing.Size(110, 17);
+            this.metroCheckBox1.TabIndex = 2;
+            this.metroCheckBox1.Text = "Remember me";
+            this.metroCheckBox1.UseSelectable = true;
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.Gray;
-            this.btnLogin.Location = new System.Drawing.Point(57, 405);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Location = new System.Drawing.Point(419, 223);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(413, 46);
+            this.btnLogin.Size = new System.Drawing.Size(91, 36);
             this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Text = "&Login";
+            this.btnLogin.UseSelectable = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
+            // 
+            // metroStyleManager1
+            // 
+            this.metroStyleManager1.Owner = null;
             // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(529, 533);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.lblKQ);
-            this.Controls.Add(this.panelPass);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.panelUser);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.ptrUser);
-            this.Controls.Add(this.ptrPass);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtUseName);
+            this.ClientSize = new System.Drawing.Size(542, 282);
             this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.metroCheckBox1);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtUseName);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblKQ);
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fLogin_FormClosing);
+            this.Load += new System.EventHandler(this.fLogin_Load);
+           // this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.fLogin_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptrUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptrPass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtUseName;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox ptrPass;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.Panel panelUser;
-        private System.Windows.Forms.Panel panelPass;
-        private System.Windows.Forms.PictureBox ptrUser;
         private System.Windows.Forms.Label lblKQ;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroTextBox txtUseName;
+        private MetroFramework.Controls.MetroTextBox txtPass;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
+        private MetroFramework.Controls.MetroButton btnLogin;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
     }
 }
 

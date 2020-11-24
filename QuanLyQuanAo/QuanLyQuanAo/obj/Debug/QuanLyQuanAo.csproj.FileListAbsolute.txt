@@ -82,3 +82,27 @@ C:\Users\PC\Desktop\GIT HUB\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\De
 C:\Users\PC\Desktop\GIT HUB\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.csproj.CoreCompileInputs.cache
 C:\Users\PC\Desktop\GIT HUB\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.exe
 C:\Users\PC\Desktop\GIT HUB\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.pdb
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\bin\Debug\QuanLyQuanAo.exe.config
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\bin\Debug\QuanLyQuanAo.exe
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\bin\Debug\QuanLyQuanAo.pdb
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fAdmin.resources
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fBill.resources
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fCTHang.resources
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fKhachHang.resources
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fLogin.resources
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fMains.resources
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fMuaHangOnline.resources
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fNhanVien.resources
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fSignUp.resources
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fTableManager.resources
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fXacNhanAdmin.resources
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.Properties.Resources.resources
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.exe
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.pdb
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\bin\Debug\MetroFramework.Design.dll
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\bin\Debug\MetroFramework.dll
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.csproj.CopyComplete

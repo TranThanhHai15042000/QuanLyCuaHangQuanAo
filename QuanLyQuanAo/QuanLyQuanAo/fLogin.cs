@@ -9,19 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyQuanAo.DAO;
 using QuanLyQuanAo.DTO;
+using System.Runtime.InteropServices;
 
 namespace QuanLyQuanAo
 {
-    public partial class fLogin : Form
+    public partial class fLogin : MetroFramework.Forms.MetroForm
     {
         public fLogin()
         {
             InitializeComponent();
         }
-
-    
-
-      
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -35,6 +32,7 @@ namespace QuanLyQuanAo
         {
             return DAO_Account.Instance.Login( userName , passWord);
         }
+
         void login()
         {
             string userName = txtUseName.Text;
@@ -68,63 +66,17 @@ namespace QuanLyQuanAo
                 }
             }
         }
-        private void btnLogin_Click(object sender, EventArgs e)
+
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+            this.StyleManager = metroStyleManager1;
+            metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Light;
+            metroStyleManager1.Style = MetroFramework.MetroColorStyle.Green;
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             login();
-        }
-
-        private void txtUseName_Click(object sender, EventArgs e)  
-        {
-            txtUseName.Clear();
-          //  ptrUser.BackgroundImage = Properties.Resources.User;
-            panelUser.ForeColor = Color.FromArgb(123, 121, 100);
-            txtUseName.ForeColor = Color.FromArgb(123, 121, 100);
-
-            panelUser.ForeColor = Color.WhiteSmoke;
-            txtUseName.ForeColor = Color.WhiteSmoke;
-
-
-
-        }
-
-        private void txtPass_Click(object sender, EventArgs e)
-        {
-            txtPass.Clear();
-            txtPass.PasswordChar = '*';
-          //  ptrUser.BackgroundImage = Properties.Resources.User;
-            panelPass.ForeColor = Color.FromArgb(123, 121, 100);
-            txtPass.ForeColor = Color.FromArgb(123, 121, 100);
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void txtUseName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((Keys)e.KeyChar == Keys.Enter)
-            {
-                login();
-            }
-        }
-
-        private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((Keys)e.KeyChar == Keys.Enter)
-            {
-                login();
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUseName_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

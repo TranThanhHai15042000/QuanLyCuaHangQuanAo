@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace QuanLyQuanAo
 {
@@ -33,6 +34,13 @@ namespace QuanLyQuanAo
             InitializeComponent();
             this.LoginAccount = acc;
         }
+
+        //METODO PARA ARRASTRAR EL FORMULARIO---------------------------------------------------------------------
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
 
         // fields
@@ -222,11 +230,6 @@ namespace QuanLyQuanAo
             Sidepanel.Top = button4.Top;
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             fKhachHang f = new fKhachHang();
@@ -267,6 +270,45 @@ namespace QuanLyQuanAo
         {
             Sidepanel.Height = btnBaoCao.Height;
             Sidepanel.Top = btnBaoCao.Top;
+        }
+
+        int lx, ly;
+        int sw, sh;
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnNormal_Click(object sender, EventArgs e)
+        {
+            this.Size = new Size(sw, sh);
+            this.Location = new Point(lx, ly);
+            btnNormal.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            lx = this.Location.X;
+            ly = this.Location.Y;
+            sw = this.Size.Width;
+            sh = this.Size.Height;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            btnMaximizar.Visible = false;
+            btnNormal.Visible = true;
         }
     }
 }
