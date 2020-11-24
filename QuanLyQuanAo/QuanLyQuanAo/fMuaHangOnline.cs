@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace QuanLyQuanAo
 {
-    public partial class fMuaHangOnline : Form
+    public partial class fMuaHangOnline : MetroFramework.Forms.MetroForm
     {
         public fMuaHangOnline()
         {

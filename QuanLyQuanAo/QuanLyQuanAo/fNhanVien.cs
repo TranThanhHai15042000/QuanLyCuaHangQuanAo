@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QuanLyQuanAo
 {
-    public partial class fNhanVien : Form
+    public partial class fNhanVien : MetroFramework.Forms.MetroForm
     {
         DataTable tblNV;
         public fNhanVien()

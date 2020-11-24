@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QuanLyQuanAo
 {
-    public partial class fKhachHang : Form
+    public partial class fKhachHang : MetroFramework.Forms.MetroForm
     {
         DataTable tblKH; //Bảng khách hàng
 

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace QuanLyQuanAo
 {
-    public partial class fAdmin : Form
+    public partial class fAdmin : MetroFramework.Forms.MetroForm
     {
        
         public fAdmin()

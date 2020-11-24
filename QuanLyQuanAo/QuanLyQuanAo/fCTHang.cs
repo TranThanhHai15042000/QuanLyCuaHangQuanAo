@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QuanLyQuanAo
 {
-    public partial class fCTHang : Form
+    public partial class fCTHang : MetroFramework.Forms.MetroForm
     {
         //BUS_TIEPNHANHOCSINH bustiepnhanhocsinh = new BUS_TIEPNHANHOCSINH();
         // int temp;
