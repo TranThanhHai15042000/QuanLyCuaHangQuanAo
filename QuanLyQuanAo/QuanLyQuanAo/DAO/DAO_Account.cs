@@ -28,16 +28,16 @@ namespace QuanLyQuanAo.DAO
 
         public bool Login(string userName, string passWord)
         {
-            string query = "SELECT *FROM dbo.tblMaster WHERE Users = N'" + userName + "' AND Pass= N'" + passWord +"'";
+            string query = "SELECT *FROM dbo.tblNhanVien WHERE Users = N'" + userName + "' AND Pass= N'" + passWord + "'";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
 
-            return result.Rows.Count >0;
+            return result.Rows.Count > 0;
         }
-        
+
         public DTO_Account GetAccountByUserName(string userName)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("Select *from tblMaster where Users = '" + userName + "'");
+            DataTable data = DataProvider.Instance.ExecuteQuery("Select *from tblNhanVien where Users = '" + userName + "'");
 
             foreach (DataRow item in data.Rows)
             {
@@ -45,6 +45,6 @@ namespace QuanLyQuanAo.DAO
             }
             return null;
         }
-        
+
     }
 }

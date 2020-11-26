@@ -34,12 +34,12 @@ namespace QuanLyQuanAo
             sql = "SELECT * from tblKhachHang";
             tblKH = DataProvider.Instance.ExecuteQuery(sql);
             dgvKhachHang.DataSource = tblKH; //Hiển thị vào dataGridView
-            dgvKhachHang.Columns[0].HeaderText = "ID";
+            dgvKhachHang.Columns[0].HeaderText = "Mã Khách";
             dgvKhachHang.Columns[1].HeaderText = "Tên khách";
             dgvKhachHang.Columns[2].HeaderText = "Địa chỉ";
             dgvKhachHang.Columns[3].HeaderText = "Điện thoại";
             dgvKhachHang.Columns[4].HeaderText = "Ngày sinh";
-            dgvKhachHang.Columns[0].Width = 30;
+            dgvKhachHang.Columns[0].Width = 130;
             dgvKhachHang.Columns[1].Width = 130;
             dgvKhachHang.Columns[2].Width = 200;
             dgvKhachHang.Columns[3].Width = 150;
@@ -297,16 +297,36 @@ namespace QuanLyQuanAo
 
         private void txtTimKH_TextChanged(object sender, EventArgs e)
         {
-            //if(t)
-            string qr1 =( " SELECT*FROM tblNhanVien WHERE DienThoai like '%" + txtMaKhach.Text.Trim() + "%' ");
-            dgvKhachHang.DataSource = DataProvider.Instance.ExecuteQuery(qr1);
-            string qr2 = (" SELECT*FROM tblNhanVien WHERE DienThoai like '%" + txtTenKhach.Text.Trim() + "%' "); 
+          
+            if (cbbFind.Text == "MaKhach")
+            {
+                string qr1 = (" SELECT * FROM tblKhachHang WHERE idKhachHang like '%" + txtTimKH.Text.Trim() + "%' ");
+                dgvKhachHang.DataSource = DataProvider.Instance.ExecuteQuery(qr1);
 
-            string qr3 = (" SELECT*FROM tblNhanVien WHERE DienThoai like '%" + txtDiaChiKH.Text.Trim() + "%' ");
+            }
+            else if (cbbFind.Text == "TenKhach")
+            {
+                string qr2 = (" SELECT*FROM tblKhachHang WHERE TenKhach like '%" + txtTimKH.Text.Trim() + "%' ");
+                dgvKhachHang.DataSource = DataProvider.Instance.ExecuteQuery(qr2);
+            }
+            else if (cbbFind.Text == "SDT")
+            {
+                string qr3 = (" SELECT * FROM tblKhachHang WHERE DienThoai like '%" + txtTimKH.Text.Trim() + "%' ");
+                dgvKhachHang.DataSource = DataProvider.Instance.ExecuteQuery(qr3);
 
-            string qr4 = (" SELECT*FROM tblNhanVien WHERE DienThoai like '%" + mtbSDTKhach.Text.Trim() + "%' ");
+            }
+            else if (cbbFind.Text == "NgaySinh")
+            {
+                string qr4 = (" SELECT*FROM tblKhachHang WHERE NgaySinh like '%" + txtTimKH.Text.Trim() + "%' ");
+                dgvKhachHang.DataSource = DataProvider.Instance.ExecuteQuery(qr4);
+            }
+            else
+            {
+                string qr5 = (" SELECT*FROM tblKhachHang WHERE DiaChi like '%" + txtTimKH.Text.Trim() + "%' ");
+                dgvKhachHang.DataSource = DataProvider.Instance.ExecuteQuery(qr5);
+            }
+        
 
-            string qr5    = (" SELECT*FROM tblNhanVien WHERE DienThoai like '%" + dateTimeSNKH.Text.Trim() + "%' ");
 
 
 
@@ -314,6 +334,21 @@ namespace QuanLyQuanAo
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnHienThi_Click(object sender, EventArgs e)
+        {
+            string sql;
+            sql = "SELECT * FROM tblKhachHang";
+            tblKH = DAO_CTHang.GetDataToTable(sql);
+            dgvKhachHang.DataSource = tblKH;
+        }
+
+        
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

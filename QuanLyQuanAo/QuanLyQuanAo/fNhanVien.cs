@@ -195,70 +195,7 @@ namespace QuanLyQuanAo
             return   str;
         }
             
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            string sql;
-            if (txtMaNV.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập mã khách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtMaNV.Focus();
-                return;
-            }
-            if (txtTenNV.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập tên khách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtTenNV.Focus();
-                return;
-            }
-            if (txtDiaChiNV.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtDiaChiNV.Focus();
-                return;
-            }
-            if (mtbSDTNV.Text == "(   )    -") // mặc định của trường masktextNumber
-            {
-                MessageBox.Show("Bạn phải nhập điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mtbSDTNV.Focus();
-                return;
-            }
-            if(rdbNam.Checked == false && rdbNu.Checked == false)
-            {
-                MessageBox.Show("Bạn chưa chọn giới tính", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            try
-            {
-                //Kiểm tra tồn tại mã khách 
-                sql = "SELECT iDNhanVien FROM tblNhanVien WHERE iDNhanVien=N'" + txtMaNV.Text.Trim() + "'";
-                if (DAO_KhachHang.CheckKey(sql))
-                {
-                    MessageBox.Show("Mã khách này đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtMaNV.Focus();
-                    return;
-                }
-                string strGioiTinh = rdbGioiTinh();
-
-                //Chèn thêm
-                sql = "INSERT INTO dbo.tblNhanVien VALUES (N'" + txtMaNV.Text.Trim() + "',N'" + txtTenNV.Text.Trim() + "',N'" + strGioiTinh + "',N'" + txtDiaChiNV.Text.Trim() + "','" + mtbSDTNV.Text + "',N'" + datetimeNV.Value.ToString() + "')";
-                //Functions.RunSQL(sql);
-
-                DataProvider.Instance.ExecuteQuery(sql);
-                LoadDataGridView();
-                ResetValues();
-
-                btnXoa.Enabled = true;
-                btnThem.Enabled = true;
-                btnSua.Enabled = true;
-                btnBoQua.Enabled = false;
-                btnLuu.Enabled = false;
-                txtMaNV.Enabled = false;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Thêm thất bại", "Thông báo");
-            }
-        }
+      
 
         private void btnChuanTen_Click(object sender, EventArgs e)
         {
@@ -312,6 +249,105 @@ namespace QuanLyQuanAo
         {
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
+
+        private void txtTimKH_TextChanged(object sender, EventArgs e)
+        {
+            if (cbbFind.Text == "Mã nhân viên")
+            {
+                string qr1 = (" SELECT * FROM tblNhanVien WHERE idNhanVien like '%" + txtTimNV.Text.Trim() + "%' ");
+                dgvNhanVien.DataSource = DataProvider.Instance.ExecuteQuery(qr1);
+
+            }
+            else if (cbbFind.Text == "Tên nhân viên")
+            {
+                string qr2 = (" SELECT*FROM tblNhanVien WHERE TenNV like '%" + txtTimNV.Text.Trim() + "%' ");
+                dgvNhanVien.DataSource = DataProvider.Instance.ExecuteQuery(qr2);
+            }
+            else if (cbbFind.Text == "Số điện thoại")
+            { 
+                string qr3 = (" SELECT * FROM tblNhanVien WHERE DienThoai like '%" + txtTimNV.Text.Trim() + "%' ");
+                dgvNhanVien.DataSource = DataProvider.Instance.ExecuteQuery(qr3);
+
+            }
+            else if (cbbFind.Text == "Ngày sinh")
+            {
+                string qr4 = (" SELECT*FROM tblNhanVien WHERE NgaySinh like '%" + txtTimNV.Text.Trim() + "%' ");
+                dgvNhanVien.DataSource = DataProvider.Instance.ExecuteQuery(qr4);
+            }
+            else if(cbbFind.Text == "Địa chỉ")
+            {
+                string qr5 = (" SELECT*FROM tblNhanVien WHERE DiaChi like '%" + txtTimNV.Text.Trim() + "%' ");
+                dgvNhanVien.DataSource = DataProvider.Instance.ExecuteQuery(qr5);
+            }
+
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
+            string sql;
+            if (txtMaNV.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập mã khách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaNV.Focus();
+                return;
+            }
+            if (txtTenNV.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập tên khách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenNV.Focus();
+                return;
+            }
+            if (txtDiaChiNV.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDiaChiNV.Focus();
+                return;
+            }
+            if (mtbSDTNV.Text == "(   )    -") // mặc định của trường masktextNumber
+            {
+                MessageBox.Show("Bạn phải nhập điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtbSDTNV.Focus();
+                return;
+            }
+            if (rdbNam.Checked == false && rdbNu.Checked == false)
+            {
+                MessageBox.Show("Bạn chưa chọn giới tính", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            try
+            {
+                //Kiểm tra tồn tại mã khách 
+                sql = "SELECT iDNhanVien FROM tblNhanVien WHERE iDNhanVien=N'" + txtMaNV.Text.Trim() + "'";
+                if (DAO_KhachHang.CheckKey(sql))
+                {
+                    MessageBox.Show("Mã khách này đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtMaNV.Focus();
+                    return;
+                }
+                string strGioiTinh = rdbGioiTinh();
+
+                //Chèn thêm
+                sql = "INSERT INTO dbo.tblNhanVien ( iDNhanVien ,TenNV , GioiTinh ,DiaChi ,  DienThoai ,NgaySinh  ) VALUES (N'" + txtMaNV.Text.Trim() + "',N'" + txtTenNV.Text.Trim() + "',N'" + strGioiTinh + "',N'" + txtDiaChiNV.Text.Trim() + "','" + mtbSDTNV.Text + "',N'" + datetimeNV.Value.ToString() + "')";
+                //Functions.RunSQL(sql);
+
+                DataProvider.Instance.ExecuteQuery(sql);
+                LoadDataGridView();
+                ResetValues();
+
+                btnXoa.Enabled = true;
+                btnThem.Enabled = true;
+                btnSua.Enabled = true;
+                btnBoQua.Enabled = false;
+                btnLuu.Enabled = false;
+                txtMaNV.Enabled = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Thêm thất bại", "Thông báo");
+            }
+        }
+
+
 
 
 

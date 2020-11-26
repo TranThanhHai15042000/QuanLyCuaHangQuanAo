@@ -12,138 +12,140 @@ namespace QuanLyQuanAo.DAO
 {
     class DAO_CTHang
     {
-        public DataTable getData()
+        //public static SqlConnection con = null;
+        public static void FillCombo(string sql, ComboBox cbo, string ma, string ten)
         {
-            SqlConnection con = DataProvider.getConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from [dbo].[tblCT_Hang]", con); // hộ trợ chuyển đổi dữ liệu lấy từ database về cho datatable
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
+            SqlDataAdapter dap = new SqlDataAdapter(sql, DataProvider.getConnection());
+            DataTable table = new DataTable();
+            dap.Fill(table);
+            cbo.DataSource = table;
+            cbo.ValueMember = ma; //Trường giá trị
+            cbo.DisplayMember = ten; //Trường hiển thị
         }
-        public void LoadHang(DataGridView dgv)
+
+        //public static string GetFieldValues(string sql)
+        //{
+        //SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-D8S4ML5\SQLEXPRESS;Initial Catalog=QLQA_Main;Integrated Security=True");
+
+        //string ma = "";
+        //SqlCommand cmd = new SqlCommand(sql, DataProvider.getConnection());
+        //SqlDataReader reader;
+        //reader = cmd.ExecuteReader();
+        //while (reader.Read())
+        //    ma = reader.GetValue(0).ToString();
+        //reader.Close();
+        //return ma;
+
+
+        //using (var conn = new SqlConnection(con) 
+        //using (var cmd = conn.CreateCommand()) 
+        //{
+        //    conn.Open();
+        //    cmd.CommandText = "SELECT * FROM learer WHERE id = @id";
+        //    cmd.Parameters.AddWithValue("@id", index);
+        //    using (var reader = cmd.ExecuteReader())
+        //    {
+        //        if (reader.Read())
+        //        {
+        //             = reader.GetString(reader.GetOrdinal("Ten"))
+        //        }
+        //    }
+        //}
+        //}
+        public static string SimpleRead(string sql)
         {
-            SqlConnection con = DataProvider.getConnection();
+            string ma = "";
+            // declare the SqlDataReader, which is used in
+            // both the try block and the finally block
+            SqlDataReader rdr = null;
+
+            // create a connection object
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-D8S4ML5\SQLEXPRESS;Initial Catalog=QLQA_Main;Integrated Security=True");
+
+            // create a command object
+            SqlCommand cmd = new SqlCommand(
+                sql, conn);
+
             try
             {
-                //select idCTHang  as 'Mã CT_hàng ', Ten as 'Tên', Size as 'Size', KieuDang as 'Kiểu dáng' ,ChatLieu as 'Chất liệu',Anh as 'Ảnh',GhiChu as 'Ghi chú' from [dbo].[tblCT_Hang]
-                if (con.State == ConnectionState.Closed) con.Open();
-                string sql = " SELECT * FROM dbo.tblCT_Hang";//
-                SqlCommand command = new SqlCommand(sql, con);  // thục thi câu lệnh query
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataSet data = new DataSet();
-                adapter.Fill(data, "tblCT_Hang");//
-                dgv.DataSource = data.Tables["tbl_CTHang"];//
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
+                // open the connection
+                conn.Open();
+
+                // 1.  get an instance of the SqlDataReader
+                rdr = cmd.ExecuteReader();
+
+                // print a set of column headers
+
+
+                // 2.  print necessary columns of each record
+                while (rdr.Read())
+                {
+                    // get the results of each column
+                    ma = rdr.GetValue(0).ToString();
+                    // ma = (string)rdr["ten"];
+                    // print out the results
+
+                }
             }
             finally
             {
-                con.Close();
+                // 3. close the reader
+                if (rdr != null)
+                {
+                    rdr.Close();
+                }
+
+                // close the connection
+                if (conn != null)
+                {
+                    conn.Close();
+                }
             }
+            return ma;
         }
 
-        public void cellClick(object sender, DataGridViewCellEventArgs e, DataGridView dgv, DTO_CTHang hag)
+        public static bool CheckKey(string sql)
         {
-            DataGridViewRow row = new DataGridViewRow();
-            if (e.RowIndex >= 0)
-            {
-                row = dgv.Rows[e.RowIndex]; // lấy từng dòngg
-                hag.IdCTHang = Convert.ToString(row.Cells[0].Value);
-                hag.Ten = Convert.ToString(row.Cells[1].Value);
-                hag.Size = Convert.ToString(row.Cells[2].Value);
-                hag.KieuDang = Convert.ToString(row.Cells[3].Value);
-                hag.ChatLieu = Convert.ToString(row.Cells[4].Value);
-                hag.Anh = Convert.ToString(row.Cells[5].Value);
-                hag.GhiChu = Convert.ToString(row.Cells[6].Value);
-
-            }
-
-
+            SqlDataAdapter dap = new SqlDataAdapter(sql, DataProvider.getConnection());
+            DataTable table = new DataTable();
+            dap.Fill(table);
+            if (table.Rows.Count > 0)
+                return true;
+            return false;
         }
-        public void ThemHang(DTO_CTHang hag)
-        {
 
-            SqlConnection con = DataProvider.getConnection();
+        public static void RunSqlDel(string query)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = DataProvider.getConnection();
+            cmd.CommandText = query;
             try
             {
-
-                if (con.State == ConnectionState.Closed) con.Open();
-                string sql = "insert into tbl.CT_Hang(IdCTHang,Ten,Size,KieuDang,ChatLieu,Anh,GhiChu) Values(@IdCTHang, @Ten,@Size,@KieuDang,@ChatLieu,@Anh,@GhiChu)";
-                SqlCommand command = new SqlCommand(sql, con);
-
-                command.Parameters.AddWithValue("IdCTHang", hag.IdCTHang);
-                command.Parameters.AddWithValue("Ten", hag.Ten);
-                command.Parameters.AddWithValue("Size", hag.Size);
-                command.Parameters.AddWithValue("KieuDang", hag.KieuDang);
-                command.Parameters.AddWithValue("ChatLieu", hag.ChatLieu);
-                command.Parameters.AddWithValue("Anh", hag.Anh);
-                command.Parameters.AddWithValue("Ghichu", hag.GhiChu);
-
-                command.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Hàng nhập không hợp lệ, vui lòng nhập lại");
-                //MessageBox.Show("Lỗi: " + ex.Message);
+                //MessageBox.Show("Dữ liệu đang được dùng, không thể xoá...", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(ex.ToString());
             }
-            finally
-            {
-                con.Close();
-            }
+            cmd.Dispose();
+            cmd = null;
         }
-        public void deleteHang(int intID)
+
+        public static DataTable GetDataToTable(string sql)
         {
-            SqlConnection con = DataProvider.getConnection();
-            try
-            {
-                if (con.State == ConnectionState.Closed) con.Open();
-                string sql = "delete from tblCT_Hang where idCTHang = @idCTHang ";
-                SqlCommand command = new SqlCommand(sql, con);
-                command.Parameters.AddWithValue("idCTHang", intID);
-                command.ExecuteNonQuery();
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
+            SqlDataAdapter dap = new SqlDataAdapter(); //Định nghĩa đối tượng thuộc lớp SqlDataAdapter
+            //Tạo đối tượng thuộc lớp SqlCommand
+            dap.SelectCommand = new SqlCommand();
+            dap.SelectCommand.Connection = DataProvider.getConnection(); //Kết nối cơ sở dữ liệu
+            dap.SelectCommand.CommandText = sql; //Lệnh SQL
+            //Khai báo đối tượng table thuộc lớp DataTable
+            DataTable table = new DataTable();
+            dap.Fill(table);
+            return table;
         }
-        public void updateHang(DTO_CTHang hag)
-        {
 
-            SqlConnection con = DataProvider.getConnection();
-            try
-            {
 
-                if (con.State == ConnectionState.Closed) con.Open();
-                string sql = "update dbo.tblCT_Hang set Ten = @Ten, Size = @Size, KieuDang= @KieuDang, ChatLieu= @ChatLieu, Anh= @Anh,GhiChu=@GhiChu where MaHocSinh = @MaHocSinh";
-                SqlCommand command = new SqlCommand(sql, con);
-                command.Parameters.AddWithValue("@Ten", hag.Ten);
-                command.Parameters.AddWithValue("@Size", hag.Size);
-                command.Parameters.AddWithValue("@KieuDang", hag.KieuDang);
-                command.Parameters.AddWithValue("@ChatLieu", hag.ChatLieu);
-                command.Parameters.AddWithValue("@Email", hag.Anh);
-                command.Parameters.AddWithValue("@MaHocSinh", hag.GhiChu);
-
-                command.ExecuteNonQuery();
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Cập nhật hàng không thành công");
-                //MessageBox.Show("Lỗi: " + ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
     }
 }

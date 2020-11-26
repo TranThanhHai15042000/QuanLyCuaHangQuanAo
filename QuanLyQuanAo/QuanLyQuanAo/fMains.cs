@@ -262,6 +262,10 @@ namespace QuanLyQuanAo
 
         private void button6_Click(object sender, EventArgs e)
         {
+            fNhanVien f = new fNhanVien();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
             Sidepanel.Height = btnSoQuy.Height;
             Sidepanel.Top = btnSoQuy.Top;
         }
