@@ -14,17 +14,17 @@ namespace QuanLyQuanAo.DAO
     {
         public static string Con()
         {
-            return @"Data Source=DESKTOP-D8S4ML5\SQLEXPRESS;Initial Catalog=QLQA_main;Integrated Security=True";
+            return @"Data Source=DESKTOP-O7T6R5H\SQLEXPRESS2019;Initial Catalog=Quan_Ly_QuanAoo;Integrated Security=True";
         }
         public static SqlConnection getConnection()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-D8S4ML5\SQLEXPRESS;Initial Catalog=QLQA_main;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-O7T6R5H\SQLEXPRESS2019;Initial Catalog=Quan_Ly_QuanAoo;Integrated Security=True");
             return con;
         }
 
 
         private static DataProvider instance;
-        public string connectionStr = @"Data Source=DESKTOP-D8S4ML5\SQLEXPRESS;Initial Catalog=QLQA_main;Integrated Security=True";
+        public string connectionStr = @"Data Source=DESKTOP-O7T6R5H\SQLEXPRESS2019;Initial Catalog=Quan_Ly_QuanAoo;Integrated Security=True";
 
         public static DataProvider Instance
         {

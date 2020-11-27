@@ -24,35 +24,6 @@ namespace QuanLyQuanAo
             this.CenterToScreen();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            btnSua.Enabled = false;
-            btnXoa.Enabled = false;
-            btnBoQua.Enabled = true;
-            btnLuu.Enabled = true;
-            btnThem.Enabled = false;
-            ResetValues();
-            txtMaCTHang.Enabled = true;
-            txtMaCTHang.Focus();
-            txtTen.Enabled = true;
-            txtChatLieu.Enabled = true;
-            txtKieuDang.Enabled = true;
-            txtGhiChu.Enabled = true;
-        }
-
-        private void btnBoQua_Click(object sender, EventArgs e)
-        {
-            ResetValues();
-            btnBoQua.Enabled = false;
-            btnThem.Enabled = true;
-            btnXoa.Enabled = true;
-            btnSua.Enabled = true;
-            btnLuu.Enabled = false;
-            txtMaCTHang.Enabled = false;
-
-
-        }
-
         private void fCTHang_Load(object sender, EventArgs e)
         {
 
@@ -146,152 +117,13 @@ namespace QuanLyQuanAo
             return Image.FromStream(m);
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            string sql;
-            if ((txtMaCTHang.Text == "") && (txtTen.Text == "") && (txtSize.Text == "") && (txtChatLieu.Text == "") && (txtKieuDang.Text == "") && (txtGhiChu.Text == ""))
-            {
-                MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            sql = "SELECT * from tblCT_Hang WHERE  1=1";
-            if (txtMaCTHang.Text != "")
-                sql += "  And idCTHang LIKE N'%" + txtMaCTHang.Text + "%'";
-            if (txtTen.Text != "")
-                sql += " AND Ten LIKE N'%" + txtTen.Text + "%'";
-            if (txtSize.Text != "")
-                sql += " AND Size LIKE N'%" + txtSize.Text + "%'";
-            if (txtKieuDang.Text != "")
-                sql += " AND KieuDang LIKE N'%" + txtKieuDang.Text + "%'";
-            if (txtChatLieu.Text != "")
-                sql += " AND ChatLieu LIKE N'%" + txtChatLieu.Text + "%'";
-            if (txtGhiChu.Text != "")
-                sql += " AND GhiChu LIKE N'%" + txtGhiChu.Text + "%'";
-
-
-            tblH = DAO_CTHang.GetDataToTable(sql);
-            //dgvHang.DataSource = DataProvider.Instance.ExecuteQuery(sql);
-            if (tblH.Rows.Count == 0)
-                MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else MessageBox.Show("Có " + tblH.Rows.Count + "  bản ghi thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dgvHang.DataSource = tblH;
-            ResetValues();
-        }
+        
 
         byte[] ImmagetoByteArray(Image img)
         {
             MemoryStream m = new MemoryStream();
             img.Save(m, System.Drawing.Imaging.ImageFormat.Jpeg);
             return m.ToArray();
-        }
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-
-
-            string idCTHang = txtMaCTHang.Text.Trim();
-            string TenHang = txtTen.Text.Trim();
-            string KieuDang = txtKieuDang.Text.Trim();
-            string ChatLieu = txtChatLieu.Text.Trim();
-            string GhiChu = txtGhiChu.Text.Trim();
-            string Size = txtSize.Text.Trim();
-            byte[] Anh = ImmagetoByteArray(picAnh.Image);
-
-            if (txtMaCTHang.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập mã hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtMaCTHang.Focus();
-                return;
-            }
-            if (txtTen.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập tên hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtTen.Focus();
-                return;
-            }
-            if (txtKieuDang.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập kiểu dáng của hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtKieuDang.Focus();
-                return;
-            }
-            if (txtChatLieu.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập chất liệu hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtChatLieu.Focus();
-                return;
-            }
-
-            if (txtSize.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải chọn size hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtSize.Focus();
-                return;
-            }
-
-
-            string sql;
-            try
-            {
-                sql = "SELECT idcthang FROM tblCT_Hang WHERE idcthang=N'" + txtMaCTHang.Text.Trim() + "'";
-                if (DAO_CTHang.CheckKey(sql))
-                {
-                    MessageBox.Show("Mã hàng này đã tồn tại, bạn phải chọn mã hàng khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtMaCTHang.Focus();
-                    return;
-                }
-
-                SqlConnection conn = DataProvider.getConnection();
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO tblCT_Hang VALUES  ( @idcthang ,@Ten ,@Size , @KieuDang , @ChatLieu ,@GhiChu, @Anh)", conn);
-
-
-
-
-                cmd.Parameters.Add("@idcthang", idCTHang);
-                cmd.Parameters.Add("@Ten", TenHang);
-                cmd.Parameters.Add("@Size", Size);
-                cmd.Parameters.Add("@KieuDang", KieuDang);
-                cmd.Parameters.Add("@ChatLieu", ChatLieu);
-                cmd.Parameters.Add("@GhiChu", GhiChu);
-                cmd.Parameters.Add("@Anh", Anh);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-
-
-
-
-                DataProvider.Instance.ExecuteQuery(sql);
-                LoadDataGridView();
-                //ResetValues();
-                btnXoa.Enabled = true;
-                btnThem.Enabled = true;
-                btnSua.Enabled = true;
-                btnBoQua.Enabled = false;
-                btnLuu.Enabled = false;
-                txtTen.Enabled = false;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Exception");
-            }
-
-        }
-
-  
-
-
-
-        private void btnHienThiDS_Click(object sender, EventArgs e)
-        {
-            string sql;
-            sql = "SELECT idCTHang,Ten,Size,KieuDang,ChatLieu,Anh FROM tblCT_Hang";
-            tblH = DAO_CTHang.GetDataToTable(sql);
-            dgvHang.DataSource = tblH;
-        }
-
-        private void btnDong_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
      
@@ -305,29 +137,44 @@ namespace QuanLyQuanAo
             }
         }
 
-        private void btnXoa_Click_1(object sender, EventArgs e)
+        private void txtSize_TextChanged(object sender, EventArgs e)
         {
-            string sql;
-            if (tblH.Rows.Count == 0)
-            {
-                MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            if (txtMaCTHang.Text == "")
-            {
-                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            if (MessageBox.Show("Bạn có muốn xoá bản ghi này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                sql = "DELETE tblCT_Hang WHERE idCTHang=N'" + txtMaCTHang.Text + "'";
-                DataProvider.Instance.ExecuteQuery(sql);
-                LoadDataGridView();
-                ResetValues();
-            }
+
         }
 
-        private void btnSua_Click_1(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnThem_Click_1(object sender, EventArgs e)
+        {
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnBoQua.Enabled = true;
+            btnLuu.Enabled = true;
+            btnThem.Enabled = false;
+            ResetValues();
+            txtMaCTHang.Enabled = true;
+            txtMaCTHang.Focus();
+            txtTen.Enabled = true;
+            txtChatLieu.Enabled = true;
+            txtKieuDang.Enabled = true;
+            txtGhiChu.Enabled = true;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            ResetValues();
+            btnBoQua.Enabled = false;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
+            btnLuu.Enabled = false;
+            txtMaCTHang.Enabled = false;
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
         {
             string sql;
             if (tblH.Rows.Count == 0)
@@ -370,15 +217,7 @@ namespace QuanLyQuanAo
             btnBoQua.Enabled = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string sql;
-            sql = "SELECT idCTHang,Ten,Size,KieuDang,ChatLieu,Anh FROM tblCT_Hang";
-            tblH = DAO_CTHang.GetDataToTable(sql);
-            dgvHang.DataSource = tblH;
-        }
-
-        private void btnLuu_Click_1(object sender, EventArgs e)
+        private void btnLuu_Click_2(object sender, EventArgs e)
         {
             string idCTHang = txtMaCTHang.Text.Trim();
             string TenHang = txtTen.Text.Trim();
@@ -468,9 +307,60 @@ namespace QuanLyQuanAo
             }
         }
 
-        private void txtSize_TextChanged(object sender, EventArgs e)
+        private void btnBoQua_Click(object sender, EventArgs e)
         {
+            ResetValues();
+            btnBoQua.Enabled = false;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
+            btnLuu.Enabled = false;
+            txtMaCTHang.Enabled = false;
+        }
 
+        private void btnTimKiem_Click_1(object sender, EventArgs e)
+        {
+            string sql;
+            if ((txtMaCTHang.Text == "") && (txtTen.Text == "") && (txtSize.Text == "") && (txtChatLieu.Text == "") && (txtKieuDang.Text == "") && (txtGhiChu.Text == ""))
+            {
+                MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            sql = "SELECT * from tblCT_Hang WHERE  1=1";
+            if (txtMaCTHang.Text != "")
+                sql += "  And idCTHang LIKE N'%" + txtMaCTHang.Text + "%'";
+            if (txtTen.Text != "")
+                sql += " AND Ten LIKE N'%" + txtTen.Text + "%'";
+            if (txtSize.Text != "")
+                sql += " AND Size LIKE N'%" + txtSize.Text + "%'";
+            if (txtKieuDang.Text != "")
+                sql += " AND KieuDang LIKE N'%" + txtKieuDang.Text + "%'";
+            if (txtChatLieu.Text != "")
+                sql += " AND ChatLieu LIKE N'%" + txtChatLieu.Text + "%'";
+            if (txtGhiChu.Text != "")
+                sql += " AND GhiChu LIKE N'%" + txtGhiChu.Text + "%'";
+
+
+            tblH = DAO_CTHang.GetDataToTable(sql);
+            //dgvHang.DataSource = DataProvider.Instance.ExecuteQuery(sql);
+            if (tblH.Rows.Count == 0)
+                MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Có " + tblH.Rows.Count + "  bản ghi thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dgvHang.DataSource = tblH;
+            ResetValues();
+        }
+
+        private void btnHienThi_Click(object sender, EventArgs e)
+        {
+            string sql;
+            sql = "SELECT idCTHang,Ten,Size,KieuDang,ChatLieu,Anh FROM tblCT_Hang";
+            tblH = DAO_CTHang.GetDataToTable(sql);
+            dgvHang.DataSource = tblH;
+        }
+
+        private void btnDong_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

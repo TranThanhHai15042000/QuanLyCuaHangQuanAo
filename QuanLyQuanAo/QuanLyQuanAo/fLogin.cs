@@ -79,13 +79,12 @@ namespace QuanLyQuanAo
             login();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void metroButton1_Click(object sender, EventArgs e)
         {
             fSignUp f = new fSignUp();
             this.Hide();
             f.ShowDialog();
             this.Show();
-
         }
     }
 }

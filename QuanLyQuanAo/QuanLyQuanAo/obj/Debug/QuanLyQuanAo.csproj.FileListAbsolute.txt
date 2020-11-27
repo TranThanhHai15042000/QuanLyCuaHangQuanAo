@@ -95,8 +95,6 @@ C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\D
 C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fMuaHangOnline.resources
 C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fNhanVien.resources
 C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fSignUp.resources
-C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fTableManager.resources
-C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.fXacNhanAdmin.resources
 C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.Properties.Resources.resources
 C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.csproj.GenerateResource.cache
 C:\Users\PC\Desktop\GIT_BASH\QuanLyCuaHangQuanAo\QuanLyQuanAo\QuanLyQuanAo\obj\Debug\QuanLyQuanAo.csproj.CoreCompileInputs.cache
