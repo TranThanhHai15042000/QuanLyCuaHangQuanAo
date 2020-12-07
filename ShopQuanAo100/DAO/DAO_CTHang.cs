@@ -22,6 +22,18 @@ namespace ShopQuanAo100.DAO
             cbo.DisplayMember = ten; //Trường hiển thị
         }
 
+        //DataTable nv = DAO_Bill.GetData("SELECT idNhanVien, TenNV FROM tblNhanVien");
+        //cbbMaNhanVien.DataSource = nv;
+        //        cbbMaNhanVien.DisplayMember = "TenNV";
+        //        cbbMaNhanVien.ValueMember = "idNhanVien";
+        public static DataTable GetData(string sql)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(sql, DataProvider.getConnection());
+            DataTable dsMK = new DataTable();
+            da.Fill(dsMK);
+            return dsMK;
+
+        }
         //public static string GetFieldValues(string sql)
         //{
         //SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-D8S4ML5\SQLEXPRESS;Initial Catalog=QLQA_Main;Integrated Security=True");

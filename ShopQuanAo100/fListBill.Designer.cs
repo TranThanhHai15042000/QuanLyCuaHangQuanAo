@@ -111,7 +111,7 @@
             this.Controls.Add(this.txtTimKiemBill);
             this.Controls.Add(this.dgvListBill);
             this.Name = "fListBill";
-            this.Text = "fListBill";
+            this.Text = "Đơn hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

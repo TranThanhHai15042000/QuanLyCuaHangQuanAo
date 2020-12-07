@@ -65,12 +65,12 @@ namespace ShopQuanAo100
             txtDonGiaSP.Clear();
             txtgiamphantramsp.Clear();
             txtThanhTien.Clear();
-            txtChatLieu.Clear();
-            txtSize.Clear();
-            comboBoxdonvisp.SelectedItem = null;
-            comboBoxdonvisp.Text = null;
+            cbbChatLieu.Text="";
+            cbbSize.Text="";
+            cbbSize.SelectedItem = null;
+            cbbSize.Text = null;
 
-            comboBoxloaisp.Text = null;
+            cbbChatLieu.Text = null;
         }
         public void huyhd()
         {
@@ -82,8 +82,8 @@ namespace ShopQuanAo100
             txtDonGiaSP.Clear();
             txtgiamphantramsp.Clear();
             txtThanhTien.Clear();
-            comboBoxdonvisp.SelectedItem = null;
-            comboBoxdonvisp.Text = null;
+            cbbSize.SelectedItem = null;
+            cbbSize.Text = null;
             txtTongTien.Clear();
             txtgiamtientong.Clear();
             txtgiamphantramtong.Clear();
@@ -149,6 +149,21 @@ namespace ShopQuanAo100
                 cbbSDTKH.DisplayMember = "dienthoai";
                 cbbSDTKH.ValueMember = "idKhachHang";
 
+
+                //lấy dữ liệu size
+                DataTable size = DAO_Bill.GetData("SELECT idSize, tenSize FROM tblCT_Hang");
+                cbbMaSP.DataSource = size;
+                cbbMaSP.DisplayMember = "tenSize";
+                cbbMaSP.ValueMember = "idSize";
+
+                // lấy dữ liệu chất liệu
+                DataTable chatlieu = DAO_Bill.GetData("SELECT idChatLieu, TenChatLieu FROM tblKhachHang");
+                cbbSDTKH.DataSource = chatlieu;
+                cbbSDTKH.DisplayMember = "TenChatLieu";
+                cbbSDTKH.ValueMember = "idChatLieu";
+
+
+
                 if (txtMaHoaDon.Text != "")
                 {
                   //  LoadInfoHoaDon();
@@ -156,6 +171,7 @@ namespace ShopQuanAo100
                   //  btnthanhtoan.Enabled = true;
                 }
                 LoadDataGridView();
+                clearsp();
             }
 
             catch (Exception ex)
@@ -336,10 +352,10 @@ namespace ShopQuanAo100
 
             str = "SELECT SoLuong FROM tblCT_Hang WHERE idCTHang = N'" + cbbMaSP.SelectedValue.ToString() + "'";
             txtsoluongsp.Text = DAO_Bill.SimpleRead(str);
-            str = "SELECT ChatLieu FROM tblCT_Hang WHERE idCTHang = N'" + cbbMaSP.SelectedValue.ToString() + "'";
-            txtChatLieu.Text = DAO_Bill.SimpleRead(str);
-            str = "SELECT Size FROM tblCT_Hang WHERE idCTHang = N'" + cbbMaSP.SelectedValue.ToString() + "'";
-            txtSize.Text = DAO_Bill.SimpleRead(str);
+            //str = "SELECT idChatLieu FROM tblCT_Hang WHERE idCTHang = N'" + cbbChatLieu.SelectedValue.ToString() + "'";
+            //cbbChatLieu.Text = DAO_Bill.SimpleRead(str);
+            //str = "SELECT idSize FROM tblCT_Hang WHERE idCTHang = N'" + cbbSize.SelectedValue.ToString() + "'";
+            //cbbSize.Text = DAO_Bill.SimpleRead(str);
 
             // thành tiền
             double giamgiaTextbox = 0;
@@ -520,8 +536,8 @@ namespace ShopQuanAo100
 
                 txtThanhTien.Text = dgvHoaDon.CurrentRow.Cells[4].Value.ToString();
 
-                comboBoxdonvisp.Text = dgvHoaDon.CurrentRow.Cells[5].Value.ToString();
-                comboBoxloaisp.Text = dgvHoaDon.CurrentRow.Cells[6].Value.ToString();
+                cbbSize.Text = dgvHoaDon.CurrentRow.Cells[5].Value.ToString();
+                cbbChatLieu.Text = dgvHoaDon.CurrentRow.Cells[6].Value.ToString();
                 txtgiamphantramsp.Text = dgvHoaDon.CurrentRow.Cells[7].Value.ToString();
                 maspedit = dgvHoaDon.CurrentRow.Cells[0].Value.ToString();
                 slspedit = Convert.ToInt32(dgvHoaDon.CurrentRow.Cells[2].Value.ToString());

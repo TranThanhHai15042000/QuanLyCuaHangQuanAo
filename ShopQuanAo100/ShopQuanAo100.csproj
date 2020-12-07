@@ -51,8 +51,10 @@
   <ItemGroup>
     <Compile Include="DAO\DAO_Account.cs" />
     <Compile Include="DAO\DAO_Bill.cs" />
+    <Compile Include="DAO\DAO_ChatLieu.cs" />
     <Compile Include="DAO\DAO_CTHang.cs" />
     <Compile Include="DAO\DAO_KhachHang.cs" />
+    <Compile Include="DAO\DAO_Setting.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DTO\DTO_Account.cs" />
     <Compile Include="fBill.cs">
@@ -61,11 +63,23 @@
     <Compile Include="fBill.Designer.cs">
       <DependentUpon>fBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="fCTHang.cs">
+    <Compile Include="fChatLieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fCTHang.Designer.cs">
-      <DependentUpon>fCTHang.cs</DependentUpon>
+    <Compile Include="fChatLieu.Designer.cs">
+      <DependentUpon>fChatLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCTHangNKHo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCTHangNKHo.Designer.cs">
+      <DependentUpon>fCTHangNKHo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCTHangTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCTHangTonKho.Designer.cs">
+      <DependentUpon>fCTHangTonKho.cs</DependentUpon>
     </Compile>
     <Compile Include="fKhachHang.cs">
       <SubType>Form</SubType>
@@ -97,13 +111,37 @@
     <Compile Include="fMains.Designer.cs">
       <DependentUpon>fMains.cs</DependentUpon>
     </Compile>
+    <Compile Include="fSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSetting.Designer.cs">
+      <DependentUpon>fSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSize.Designer.cs">
+      <DependentUpon>fSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongKeDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongKeDoanhThu.Designer.cs">
+      <DependentUpon>fThongKeDoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fBill.resx">
       <DependentUpon>fBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fCTHang.resx">
-      <DependentUpon>fCTHang.cs</DependentUpon>
+    <EmbeddedResource Include="fChatLieu.resx">
+      <DependentUpon>fChatLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCTHangNKHo.resx">
+      <DependentUpon>fCTHangNKHo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCTHangTonKho.resx">
+      <DependentUpon>fCTHangTonKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fKhachHang.resx">
       <DependentUpon>fKhachHang.cs</DependentUpon>
@@ -119,6 +157,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMains.resx">
       <DependentUpon>fMains.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSetting.resx">
+      <DependentUpon>fSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSize.resx">
+      <DependentUpon>fSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongKeDoanhThu.resx">
+      <DependentUpon>fThongKeDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -164,6 +211,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mrsimple.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

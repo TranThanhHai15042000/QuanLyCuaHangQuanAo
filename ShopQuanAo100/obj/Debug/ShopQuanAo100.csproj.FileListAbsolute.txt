@@ -21,7 +21,6 @@ C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\bin\Debug\ShopQuanAo100.pdb
 C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.csprojAssemblyReference.cache
 C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.fBill.resources
-C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHang.resources
 C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.fKhachHang.resources
 C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.fLogin.resources
 C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.fNhanVien.resources
@@ -33,3 +32,10 @@ C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.
 C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.exe
 C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.pdb
 C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.fListBill.resources
+C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.fChatLieu.resources
+C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.fSetting.resources
+C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.fSize.resources
+C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHangNKHo.resources
+C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHangTonKho.resources
+C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.ResolveComReference.cache
+C:\Users\vip\Desktop\ShopQuanAo100\ShopQuanAo100\obj\Debug\ShopQuanAo100.fThongKeDoanhThu.resources

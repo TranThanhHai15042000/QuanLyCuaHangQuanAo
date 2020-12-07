@@ -292,10 +292,9 @@ namespace ShopQuanAo100
 
         private void btnClose_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn thoát", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
-            {
+            
                 this.Close();
-            }
+            
             ActivateButton(sender, RGBColors.color1);
         }
 

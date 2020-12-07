@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxloaisp = new System.Windows.Forms.ComboBox();
+            this.cbbChatLieu = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBoxdonvisp = new System.Windows.Forms.ComboBox();
+            this.cbbSize = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -48,13 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnexit = new FontAwesome.Sharp.IconButton();
-            this.btnhuyHD = new FontAwesome.Sharp.IconButton();
-            this.btnthanhtoan = new FontAwesome.Sharp.IconButton();
-            this.btnsua = new FontAwesome.Sharp.IconButton();
-            this.btnthem = new FontAwesome.Sharp.IconButton();
-            this.btnxoa = new FontAwesome.Sharp.IconButton();
-            this.btnhuy = new FontAwesome.Sharp.IconButton();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.txtgiamphantramsp = new System.Windows.Forms.TextBox();
             this.txtsoluongsp = new System.Windows.Forms.TextBox();
@@ -74,24 +67,29 @@
             this.cbbMaNhanVien = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtDonGiaSP = new System.Windows.Forms.TextBox();
-            this.txtChatLieu = new System.Windows.Forms.TextBox();
-            this.txtSize = new System.Windows.Forms.TextBox();
             this.cbbSDTKH = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtMaKhach = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.lblBangChu = new System.Windows.Forms.Label();
             this.dtpNgayBan = new System.Windows.Forms.DateTimePicker();
+            this.btnexit = new FontAwesome.Sharp.IconButton();
+            this.btnhuyHD = new FontAwesome.Sharp.IconButton();
+            this.btnthanhtoan = new FontAwesome.Sharp.IconButton();
+            this.btnsua = new FontAwesome.Sharp.IconButton();
+            this.btnthem = new FontAwesome.Sharp.IconButton();
+            this.btnxoa = new FontAwesome.Sharp.IconButton();
+            this.btnhuy = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBoxloaisp
+            // cbbChatLieu
             // 
-            this.comboBoxloaisp.FormattingEnabled = true;
-            this.comboBoxloaisp.Location = new System.Drawing.Point(940, 208);
-            this.comboBoxloaisp.Name = "comboBoxloaisp";
-            this.comboBoxloaisp.Size = new System.Drawing.Size(92, 21);
-            this.comboBoxloaisp.TabIndex = 92;
+            this.cbbChatLieu.FormattingEnabled = true;
+            this.cbbChatLieu.Location = new System.Drawing.Point(855, 156);
+            this.cbbChatLieu.Name = "cbbChatLieu";
+            this.cbbChatLieu.Size = new System.Drawing.Size(92, 21);
+            this.cbbChatLieu.TabIndex = 92;
             // 
             // label8
             // 
@@ -143,13 +141,13 @@
             this.label15.TabIndex = 87;
             this.label15.Text = "VNĐ";
             // 
-            // comboBoxdonvisp
+            // cbbSize
             // 
-            this.comboBoxdonvisp.FormattingEnabled = true;
-            this.comboBoxdonvisp.Location = new System.Drawing.Point(875, 208);
-            this.comboBoxdonvisp.Name = "comboBoxdonvisp";
-            this.comboBoxdonvisp.Size = new System.Drawing.Size(59, 21);
-            this.comboBoxdonvisp.TabIndex = 86;
+            this.cbbSize.FormattingEnabled = true;
+            this.cbbSize.Location = new System.Drawing.Point(789, 156);
+            this.cbbSize.Name = "cbbSize";
+            this.cbbSize.Size = new System.Drawing.Size(59, 21);
+            this.cbbSize.TabIndex = 86;
             // 
             // label14
             // 
@@ -280,102 +278,6 @@
             this.label1.Size = new System.Drawing.Size(35, 16);
             this.label1.TabIndex = 73;
             this.label1.Text = "SĐT";
-            // 
-            // btnexit
-            // 
-            this.btnexit.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnexit.IconColor = System.Drawing.Color.Black;
-            this.btnexit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnexit.IconSize = 16;
-            this.btnexit.Location = new System.Drawing.Point(869, 440);
-            this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(77, 35);
-            this.btnexit.TabIndex = 72;
-            this.btnexit.Text = "Thoát";
-            this.btnexit.UseVisualStyleBackColor = true;
-            // 
-            // btnhuyHD
-            // 
-            this.btnhuyHD.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnhuyHD.IconColor = System.Drawing.Color.Black;
-            this.btnhuyHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnhuyHD.IconSize = 16;
-            this.btnhuyHD.Location = new System.Drawing.Point(781, 440);
-            this.btnhuyHD.Name = "btnhuyHD";
-            this.btnhuyHD.Size = new System.Drawing.Size(77, 35);
-            this.btnhuyHD.TabIndex = 71;
-            this.btnhuyHD.Text = "Hủy HĐ";
-            this.btnhuyHD.UseVisualStyleBackColor = true;
-            this.btnhuyHD.Click += new System.EventHandler(this.btnhuyHD_Click);
-            // 
-            // btnthanhtoan
-            // 
-            this.btnthanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthanhtoan.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnthanhtoan.IconColor = System.Drawing.Color.Black;
-            this.btnthanhtoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnthanhtoan.IconSize = 16;
-            this.btnthanhtoan.Location = new System.Drawing.Point(621, 341);
-            this.btnthanhtoan.Name = "btnthanhtoan";
-            this.btnthanhtoan.Size = new System.Drawing.Size(326, 77);
-            this.btnthanhtoan.TabIndex = 70;
-            this.btnthanhtoan.Text = "Thanh toán";
-            this.btnthanhtoan.UseVisualStyleBackColor = true;
-            this.btnthanhtoan.Click += new System.EventHandler(this.btnthanhtoan_Click);
-            // 
-            // btnsua
-            // 
-            this.btnsua.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnsua.IconColor = System.Drawing.Color.Black;
-            this.btnsua.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnsua.IconSize = 16;
-            this.btnsua.Location = new System.Drawing.Point(704, 270);
-            this.btnsua.Name = "btnsua";
-            this.btnsua.Size = new System.Drawing.Size(77, 55);
-            this.btnsua.TabIndex = 69;
-            this.btnsua.Text = "Sửa";
-            this.btnsua.UseVisualStyleBackColor = true;
-            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
-            // 
-            // btnthem
-            // 
-            this.btnthem.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnthem.IconColor = System.Drawing.Color.Black;
-            this.btnthem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnthem.IconSize = 20;
-            this.btnthem.Location = new System.Drawing.Point(621, 270);
-            this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(77, 55);
-            this.btnthem.TabIndex = 68;
-            this.btnthem.Text = "Thêm";
-            this.btnthem.UseVisualStyleBackColor = true;
-            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
-            // 
-            // btnxoa
-            // 
-            this.btnxoa.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnxoa.IconColor = System.Drawing.Color.Black;
-            this.btnxoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnxoa.IconSize = 16;
-            this.btnxoa.Location = new System.Drawing.Point(787, 270);
-            this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(77, 55);
-            this.btnxoa.TabIndex = 67;
-            this.btnxoa.Text = "Xóa";
-            this.btnxoa.UseVisualStyleBackColor = true;
-            // 
-            // btnhuy
-            // 
-            this.btnhuy.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnhuy.IconColor = System.Drawing.Color.Black;
-            this.btnhuy.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnhuy.IconSize = 16;
-            this.btnhuy.Location = new System.Drawing.Point(870, 270);
-            this.btnhuy.Name = "btnhuy";
-            this.btnhuy.Size = new System.Drawing.Size(77, 55);
-            this.btnhuy.TabIndex = 66;
-            this.btnhuy.Text = "Hủy";
-            this.btnhuy.UseVisualStyleBackColor = true;
             // 
             // txtThanhTien
             // 
@@ -530,20 +432,6 @@
             this.txtDonGiaSP.Size = new System.Drawing.Size(100, 20);
             this.txtDonGiaSP.TabIndex = 100;
             // 
-            // txtChatLieu
-            // 
-            this.txtChatLieu.Location = new System.Drawing.Point(795, 158);
-            this.txtChatLieu.Name = "txtChatLieu";
-            this.txtChatLieu.Size = new System.Drawing.Size(77, 20);
-            this.txtChatLieu.TabIndex = 101;
-            // 
-            // txtSize
-            // 
-            this.txtSize.Location = new System.Drawing.Point(878, 158);
-            this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(69, 20);
-            this.txtSize.TabIndex = 101;
-            // 
             // cbbSDTKH
             // 
             this.cbbSDTKH.FormattingEnabled = true;
@@ -595,6 +483,102 @@
             this.dtpNgayBan.Size = new System.Drawing.Size(200, 20);
             this.dtpNgayBan.TabIndex = 108;
             // 
+            // btnexit
+            // 
+            this.btnexit.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnexit.IconColor = System.Drawing.Color.Black;
+            this.btnexit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnexit.IconSize = 16;
+            this.btnexit.Location = new System.Drawing.Point(869, 440);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(77, 35);
+            this.btnexit.TabIndex = 72;
+            this.btnexit.Text = "Thoát";
+            this.btnexit.UseVisualStyleBackColor = true;
+            // 
+            // btnhuyHD
+            // 
+            this.btnhuyHD.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnhuyHD.IconColor = System.Drawing.Color.Black;
+            this.btnhuyHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnhuyHD.IconSize = 16;
+            this.btnhuyHD.Location = new System.Drawing.Point(781, 440);
+            this.btnhuyHD.Name = "btnhuyHD";
+            this.btnhuyHD.Size = new System.Drawing.Size(77, 35);
+            this.btnhuyHD.TabIndex = 71;
+            this.btnhuyHD.Text = "Hủy HĐ";
+            this.btnhuyHD.UseVisualStyleBackColor = true;
+            this.btnhuyHD.Click += new System.EventHandler(this.btnhuyHD_Click);
+            // 
+            // btnthanhtoan
+            // 
+            this.btnthanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthanhtoan.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnthanhtoan.IconColor = System.Drawing.Color.Black;
+            this.btnthanhtoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnthanhtoan.IconSize = 16;
+            this.btnthanhtoan.Location = new System.Drawing.Point(621, 341);
+            this.btnthanhtoan.Name = "btnthanhtoan";
+            this.btnthanhtoan.Size = new System.Drawing.Size(326, 77);
+            this.btnthanhtoan.TabIndex = 70;
+            this.btnthanhtoan.Text = "Thanh toán";
+            this.btnthanhtoan.UseVisualStyleBackColor = true;
+            this.btnthanhtoan.Click += new System.EventHandler(this.btnthanhtoan_Click);
+            // 
+            // btnsua
+            // 
+            this.btnsua.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnsua.IconColor = System.Drawing.Color.Black;
+            this.btnsua.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnsua.IconSize = 16;
+            this.btnsua.Location = new System.Drawing.Point(704, 270);
+            this.btnsua.Name = "btnsua";
+            this.btnsua.Size = new System.Drawing.Size(77, 55);
+            this.btnsua.TabIndex = 69;
+            this.btnsua.Text = "Sửa";
+            this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
+            // 
+            // btnthem
+            // 
+            this.btnthem.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnthem.IconColor = System.Drawing.Color.Black;
+            this.btnthem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnthem.IconSize = 20;
+            this.btnthem.Location = new System.Drawing.Point(621, 270);
+            this.btnthem.Name = "btnthem";
+            this.btnthem.Size = new System.Drawing.Size(77, 55);
+            this.btnthem.TabIndex = 68;
+            this.btnthem.Text = "Thêm";
+            this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
+            // 
+            // btnxoa
+            // 
+            this.btnxoa.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnxoa.IconColor = System.Drawing.Color.Black;
+            this.btnxoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnxoa.IconSize = 16;
+            this.btnxoa.Location = new System.Drawing.Point(787, 270);
+            this.btnxoa.Name = "btnxoa";
+            this.btnxoa.Size = new System.Drawing.Size(77, 55);
+            this.btnxoa.TabIndex = 67;
+            this.btnxoa.Text = "Xóa";
+            this.btnxoa.UseVisualStyleBackColor = true;
+            // 
+            // btnhuy
+            // 
+            this.btnhuy.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnhuy.IconColor = System.Drawing.Color.Black;
+            this.btnhuy.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnhuy.IconSize = 16;
+            this.btnhuy.Location = new System.Drawing.Point(870, 270);
+            this.btnhuy.Name = "btnhuy";
+            this.btnhuy.Size = new System.Drawing.Size(77, 55);
+            this.btnhuy.TabIndex = 66;
+            this.btnhuy.Text = "Hủy";
+            this.btnhuy.UseVisualStyleBackColor = true;
+            // 
             // fBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -606,21 +590,19 @@
             this.Controls.Add(this.txtMaKhach);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.cbbSDTKH);
-            this.Controls.Add(this.txtSize);
-            this.Controls.Add(this.txtChatLieu);
             this.Controls.Add(this.txtDonGiaSP);
             this.Controls.Add(this.cbbMaNhanVien);
             this.Controls.Add(this.txtTenKH);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.Ten);
             this.Controls.Add(this.cbbMaSP);
-            this.Controls.Add(this.comboBoxloaisp);
+            this.Controls.Add(this.cbbChatLieu);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.comboBoxdonvisp);
+            this.Controls.Add(this.cbbSize);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -656,7 +638,7 @@
             this.Controls.Add(this.dgvHoaDon);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fBill";
-            this.Text = "fBill";
+            this.Text = "Đơn hàng";
             this.Load += new System.EventHandler(this.fBill_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
             this.ResumeLayout(false);
@@ -666,13 +648,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBoxloaisp;
+        private System.Windows.Forms.ComboBox cbbChatLieu;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBoxdonvisp;
+        private System.Windows.Forms.ComboBox cbbSize;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -712,8 +694,6 @@
         private System.Windows.Forms.ComboBox cbbMaNhanVien;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtDonGiaSP;
-        private System.Windows.Forms.TextBox txtChatLieu;
-        private System.Windows.Forms.TextBox txtSize;
         private System.Windows.Forms.ComboBox cbbSDTKH;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtMaKhach;

@@ -119,6 +119,9 @@ namespace ShopQuanAo100
                 //Current Child Form Icon
                 iconCurrentChildForm.IconChar = currentBtn.IconChar;
                 iconCurrentChildForm.IconColor = color;
+
+
+
             }
         }
         private void DisableButton()
@@ -150,6 +153,8 @@ namespace ShopQuanAo100
             childForm.BringToFront();
             childForm.Show();
             labelcon.Text = childForm.Text;
+
+
         }
         private void Reset()
         {
@@ -185,19 +190,19 @@ namespace ShopQuanAo100
         private void iconButton4_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new fKhachHang());
+            OpenChildForm(new fCTHangNKHo());
         }
 
         private void iconButton5_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
-            OpenChildForm(new fCTHang());
+            OpenChildForm(new fCTHangTonKho());
         }
 
         private void iconButton6_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new fNhanVien());
+            OpenChildForm(new fThongKeDoanhThu());
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
@@ -352,16 +357,40 @@ namespace ShopQuanAo100
 
         }
 
-        private void iconButtonSP_Click(object sender, EventArgs e)
+        
+
+      
+
+     
+
+        private void iconButtonSP_Click_2(object sender, EventArgs e)
         {
-            if (PanelDropDownSP.Height == 50)
-            {
-                PanelDropDownSP.Height = 100;
-            }
-            else
+            if (PanelDropDownSP.Height == 170)
             {
                 PanelDropDownSP.Height = 50;
             }
+            else
+            {
+                PanelDropDownSP.Height = 170;
+            }
+        }
+
+        private void iconButtonSPLoai_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            OpenChildForm(new fChatLieu());
+        }
+
+        private void btnSize_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color4);
+            OpenChildForm(new fSize());
+        }
+
+        private void btnsetting_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color5);
+            OpenChildForm(new fSetting());
         }
     }
 }

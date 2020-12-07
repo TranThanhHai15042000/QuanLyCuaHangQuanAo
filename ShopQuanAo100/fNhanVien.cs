@@ -231,10 +231,9 @@ namespace ShopQuanAo100
         private void iconButton5_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("Bạn muốn thoát", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
-            {
+          
                 this.Close();
-            }
+    
             ActivateButton(sender, RGBColors.color3);
         }
 
@@ -417,6 +416,20 @@ namespace ShopQuanAo100
                 }
                 txtTenNV.Text = kq;
             }
+        }
+
+        private void btnHienThi_Click(object sender, EventArgs e)
+        {
+            string sql;
+            sql = "SELECT * FROM tblNhanVien";
+            tblNV = DAO_CTHang.GetDataToTable(sql);
+            dgvNhanVien.DataSource = tblNV;
+            ActivateButton(sender, RGBColors.color3);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
  }

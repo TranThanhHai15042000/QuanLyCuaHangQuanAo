@@ -43,6 +43,7 @@
             this.txtTenKhach = new System.Windows.Forms.TextBox();
             this.dateTimeSNKH = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnBoQua = new FontAwesome.Sharp.IconButton();
             this.btnHienThi = new FontAwesome.Sharp.IconButton();
@@ -50,7 +51,6 @@
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,7 +79,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1028, 110);
+            this.panel2.Size = new System.Drawing.Size(908, 110);
             this.panel2.TabIndex = 2;
             // 
             // cbbFind
@@ -92,7 +92,7 @@
             "SDT",
             "NgaySinh",
             "DiaChi"});
-            this.cbbFind.Location = new System.Drawing.Point(325, 76);
+            this.cbbFind.Location = new System.Drawing.Point(434, 77);
             this.cbbFind.Margin = new System.Windows.Forms.Padding(2);
             this.cbbFind.Name = "cbbFind";
             this.cbbFind.Size = new System.Drawing.Size(86, 24);
@@ -100,7 +100,7 @@
             // 
             // txtTimKH
             // 
-            this.txtTimKH.Location = new System.Drawing.Point(428, 76);
+            this.txtTimKH.Location = new System.Drawing.Point(537, 77);
             this.txtTimKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKH.Name = "txtTimKH";
             this.txtTimKH.Size = new System.Drawing.Size(216, 22);
@@ -110,7 +110,7 @@
             // mtbSDTKhach
             // 
             this.mtbSDTKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbSDTKhach.Location = new System.Drawing.Point(120, 76);
+            this.mtbSDTKhach.Location = new System.Drawing.Point(229, 70);
             this.mtbSDTKhach.Margin = new System.Windows.Forms.Padding(2);
             this.mtbSDTKhach.Mask = "(999) 000-0000";
             this.mtbSDTKhach.Name = "mtbSDTKhach";
@@ -121,7 +121,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 15);
+            this.label1.Location = new System.Drawing.Point(124, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 19);
@@ -132,7 +132,7 @@
             // 
             this.lblNameKH.AutoSize = true;
             this.lblNameKH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameKH.Location = new System.Drawing.Point(14, 46);
+            this.lblNameKH.Location = new System.Drawing.Point(123, 40);
             this.lblNameKH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNameKH.Name = "lblNameKH";
             this.lblNameKH.Size = new System.Drawing.Size(104, 19);
@@ -143,7 +143,7 @@
             // 
             this.lblDateKH.AutoSize = true;
             this.lblDateKH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateKH.Location = new System.Drawing.Point(322, 8);
+            this.lblDateKH.Location = new System.Drawing.Point(431, 9);
             this.lblDateKH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateKH.Name = "lblDateKH";
             this.lblDateKH.Size = new System.Drawing.Size(69, 19);
@@ -156,7 +156,7 @@
             this.btnChuanTen.FlatAppearance.BorderSize = 0;
             this.btnChuanTen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChuanTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChuanTen.Location = new System.Drawing.Point(244, 15);
+            this.btnChuanTen.Location = new System.Drawing.Point(353, 9);
             this.btnChuanTen.Margin = new System.Windows.Forms.Padding(4);
             this.btnChuanTen.Name = "btnChuanTen";
             this.btnChuanTen.Size = new System.Drawing.Size(70, 25);
@@ -169,7 +169,7 @@
             // 
             this.lblSDT.AutoSize = true;
             this.lblSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSDT.Location = new System.Drawing.Point(15, 80);
+            this.lblSDT.Location = new System.Drawing.Point(124, 74);
             this.lblSDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSDT.Name = "lblSDT";
             this.lblSDT.Size = new System.Drawing.Size(88, 19);
@@ -180,7 +180,7 @@
             // 
             this.lblDiaChiKH.AutoSize = true;
             this.lblDiaChiKH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaChiKH.Location = new System.Drawing.Point(322, 41);
+            this.lblDiaChiKH.Location = new System.Drawing.Point(431, 42);
             this.lblDiaChiKH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDiaChiKH.Name = "lblDiaChiKH";
             this.lblDiaChiKH.Size = new System.Drawing.Size(55, 19);
@@ -190,7 +190,7 @@
             // txtDiaChiKH
             // 
             this.txtDiaChiKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChiKH.Location = new System.Drawing.Point(428, 40);
+            this.txtDiaChiKH.Location = new System.Drawing.Point(537, 41);
             this.txtDiaChiKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaChiKH.Name = "txtDiaChiKH";
             this.txtDiaChiKH.Size = new System.Drawing.Size(216, 22);
@@ -199,7 +199,7 @@
             // txtMaKhach
             // 
             this.txtMaKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKhach.Location = new System.Drawing.Point(120, 15);
+            this.txtMaKhach.Location = new System.Drawing.Point(229, 9);
             this.txtMaKhach.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaKhach.Name = "txtMaKhach";
             this.txtMaKhach.Size = new System.Drawing.Size(114, 22);
@@ -208,7 +208,7 @@
             // txtTenKhach
             // 
             this.txtTenKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenKhach.Location = new System.Drawing.Point(120, 45);
+            this.txtTenKhach.Location = new System.Drawing.Point(229, 39);
             this.txtTenKhach.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenKhach.Name = "txtTenKhach";
             this.txtTenKhach.Size = new System.Drawing.Size(114, 22);
@@ -218,7 +218,7 @@
             // dateTimeSNKH
             // 
             this.dateTimeSNKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeSNKH.Location = new System.Drawing.Point(428, 6);
+            this.dateTimeSNKH.Location = new System.Drawing.Point(537, 7);
             this.dateTimeSNKH.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSNKH.Name = "dateTimeSNKH";
             this.dateTimeSNKH.Size = new System.Drawing.Size(216, 20);
@@ -235,10 +235,23 @@
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 479);
+            this.panel1.Location = new System.Drawing.Point(0, 499);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1028, 62);
+            this.panel1.Size = new System.Drawing.Size(908, 62);
             this.panel1.TabIndex = 39;
+            // 
+            // dgvKhachHang
+            // 
+            this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvKhachHang.Location = new System.Drawing.Point(0, 110);
+            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvKhachHang.Name = "dgvKhachHang";
+            this.dgvKhachHang.RowHeadersWidth = 51;
+            this.dgvKhachHang.Size = new System.Drawing.Size(908, 451);
+            this.dgvKhachHang.TabIndex = 3;
+            this.dgvKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellContentClick);
+            this.dgvKhachHang.Click += new System.EventHandler(this.dgvKhachHang_Click);
             // 
             // btnClose
             // 
@@ -252,10 +265,10 @@
             this.btnClose.IconColor = System.Drawing.Color.Gainsboro;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(900, 0);
+            this.btnClose.Location = new System.Drawing.Point(780, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(150, 62);
+            this.btnClose.Size = new System.Drawing.Size(130, 62);
             this.btnClose.TabIndex = 47;
             this.btnClose.Text = "Đóng";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,10 +288,10 @@
             this.btnBoQua.IconColor = System.Drawing.Color.Gainsboro;
             this.btnBoQua.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBoQua.Location = new System.Drawing.Point(750, 0);
+            this.btnBoQua.Location = new System.Drawing.Point(650, 0);
             this.btnBoQua.Margin = new System.Windows.Forms.Padding(2);
             this.btnBoQua.Name = "btnBoQua";
-            this.btnBoQua.Size = new System.Drawing.Size(150, 62);
+            this.btnBoQua.Size = new System.Drawing.Size(130, 62);
             this.btnBoQua.TabIndex = 46;
             this.btnBoQua.Text = "Bỏ qua";
             this.btnBoQua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -298,10 +311,10 @@
             this.btnHienThi.IconColor = System.Drawing.Color.Gainsboro;
             this.btnHienThi.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHienThi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHienThi.Location = new System.Drawing.Point(600, 0);
+            this.btnHienThi.Location = new System.Drawing.Point(520, 0);
             this.btnHienThi.Margin = new System.Windows.Forms.Padding(2);
             this.btnHienThi.Name = "btnHienThi";
-            this.btnHienThi.Size = new System.Drawing.Size(150, 62);
+            this.btnHienThi.Size = new System.Drawing.Size(130, 62);
             this.btnHienThi.TabIndex = 45;
             this.btnHienThi.Text = "Hiển thị";
             this.btnHienThi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -321,10 +334,10 @@
             this.btnLuu.IconColor = System.Drawing.Color.Gainsboro;
             this.btnLuu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(450, 0);
+            this.btnLuu.Location = new System.Drawing.Point(390, 0);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(150, 62);
+            this.btnLuu.Size = new System.Drawing.Size(130, 62);
             this.btnLuu.TabIndex = 42;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -344,10 +357,10 @@
             this.btnSua.IconColor = System.Drawing.Color.Gainsboro;
             this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(300, 0);
+            this.btnSua.Location = new System.Drawing.Point(260, 0);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(150, 62);
+            this.btnSua.Size = new System.Drawing.Size(130, 62);
             this.btnSua.TabIndex = 41;
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -367,10 +380,10 @@
             this.btnXoa.IconColor = System.Drawing.Color.Gainsboro;
             this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(150, 0);
+            this.btnXoa.Location = new System.Drawing.Point(130, 0);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(150, 62);
+            this.btnXoa.Size = new System.Drawing.Size(130, 62);
             this.btnXoa.TabIndex = 40;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -393,26 +406,13 @@
             this.btnThem.Location = new System.Drawing.Point(0, 0);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(150, 62);
+            this.btnThem.Size = new System.Drawing.Size(130, 62);
             this.btnThem.TabIndex = 39;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // dgvKhachHang
-            // 
-            this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvKhachHang.Location = new System.Drawing.Point(0, 110);
-            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvKhachHang.Name = "dgvKhachHang";
-            this.dgvKhachHang.RowHeadersWidth = 51;
-            this.dgvKhachHang.Size = new System.Drawing.Size(1028, 431);
-            this.dgvKhachHang.TabIndex = 3;
-            this.dgvKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellContentClick);
-            this.dgvKhachHang.Click += new System.EventHandler(this.dgvKhachHang_Click);
             // 
             // iconPictureBox1
             // 
@@ -421,7 +421,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Neos;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(244, 45);
+            this.iconPictureBox1.Location = new System.Drawing.Point(353, 39);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(36, 32);
             this.iconPictureBox1.TabIndex = 26;
@@ -432,7 +432,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 541);
+            this.ClientSize = new System.Drawing.Size(908, 561);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvKhachHang);
             this.Controls.Add(this.panel2);
