@@ -32,6 +32,7 @@ namespace ShopQuanAo100
         public fBill()
         {
             InitializeComponent();
+            cbbSDTKH.Height = 33;
         }
 
         private void LoadDataGridView()
@@ -546,6 +547,21 @@ namespace ShopQuanAo100
             {
                 MessageBox.Show("No data!");
             }
+        }
+
+        private void txtgiamtientong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtgiamphantramtong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbChatLieu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

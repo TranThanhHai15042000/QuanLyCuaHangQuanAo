@@ -43,7 +43,7 @@
             this.dtpNgayThang.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
             this.dtpNgayThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayThang.Location = new System.Drawing.Point(945, 156);
-            this.dtpNgayThang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNgayThang.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNgayThang.Name = "dtpNgayThang";
             this.dtpNgayThang.Size = new System.Drawing.Size(317, 30);
             this.dtpNgayThang.TabIndex = 10;
@@ -66,8 +66,8 @@
             this.txtTimKiemBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTimKiemBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiemBill.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtTimKiemBill.Location = new System.Drawing.Point(187, 83);
-            this.txtTimKiemBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimKiemBill.Location = new System.Drawing.Point(180, 83);
+            this.txtTimKiemBill.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiemBill.Multiline = true;
             this.txtTimKiemBill.Name = "txtTimKiemBill";
             this.txtTimKiemBill.Size = new System.Drawing.Size(345, 30);
@@ -79,7 +79,7 @@
             this.dgvListBill.AllowUserToDeleteRows = false;
             this.dgvListBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListBill.Location = new System.Drawing.Point(72, 156);
-            this.dgvListBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvListBill.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListBill.Name = "dgvListBill";
             this.dgvListBill.ReadOnly = true;
             this.dgvListBill.RowHeadersWidth = 51;
@@ -98,7 +98,7 @@
             this.btnXuatExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnXuatExcel.IconSize = 16;
             this.btnXuatExcel.Location = new System.Drawing.Point(945, 195);
-            this.btnXuatExcel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXuatExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnXuatExcel.Name = "btnXuatExcel";
             this.btnXuatExcel.Size = new System.Drawing.Size(317, 60);
             this.btnXuatExcel.TabIndex = 12;
@@ -146,7 +146,7 @@
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.txtTimKiemBill);
             this.Controls.Add(this.dgvListBill);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fListBill";
             this.Text = "Đơn hàng";
             this.Load += new System.EventHandler(this.fListBill_Load);
