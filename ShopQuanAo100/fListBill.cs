@@ -16,5 +16,10 @@ namespace ShopQuanAo100
         {
             InitializeComponent();
         }
+
+        private void fListBill_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

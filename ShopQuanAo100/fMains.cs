@@ -61,7 +61,7 @@ namespace ShopQuanAo100
             InitializeComponent();
             this.LoginAccount = acc;
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 90);
+            leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
             timer1.Start();//dong ho
             //Form
@@ -175,8 +175,7 @@ namespace ShopQuanAo100
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         private void iconButton2_Click(object sender, EventArgs e)
-        {
-
+        {  
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new fListBill());
         }
@@ -371,7 +370,7 @@ namespace ShopQuanAo100
             }
             else
             {
-                PanelDropDownSP.Height = 170;
+                PanelDropDownSP.Height = 210;
             }
         }
 
@@ -391,6 +390,11 @@ namespace ShopQuanAo100
         {
             ActivateButton(sender, RGBColors.color5);
             OpenChildForm(new fSetting());
+        }
+
+        private void PanelDropDownSP_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
