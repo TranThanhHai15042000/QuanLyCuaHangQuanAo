@@ -141,5 +141,90 @@ namespace ShopQuanAo100
         {
             this.Close();
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            string sql; //Lưu lệnh sql
+            if (txtMaSize.Text.Trim().Length == 0) //Nếu chưa nhập mã chất liệu
+            {
+                MessageBox.Show("Bạn phải nhập mã chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaSize.Focus();
+                return;
+            }
+            if (txtTenSize.Text.Trim().Length == 0) //Nếu chưa nhập tên chất liệu
+            {
+                MessageBox.Show("Bạn phải nhập tên chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenSize.Focus();
+                return;
+            }
+            sql = "Select idSize From tblSize where idSize=N'" + txtMaSize.Text.Trim() + "'";
+            if (DAO_ChatLieu.CheckKey(sql))
+            {
+                MessageBox.Show("Mã chất liệu này đã có, bạn phải nhập mã khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMaSize.Focus();
+                return;
+            }
+
+            sql = "INSERT INTO tblSize VALUES(N'" +
+                txtMaSize.Text + "',N'" + txtMaSize.Text + "')";
+            DataProvider.Instance.ExecuteQuery(sql); //Thực hiện câu lệnh sql
+            LoadDataGridView(); //Nạp lại DataGridView
+            ResetValue();
+
+            // txtMaSize.Enabled = false;
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            string sql; //Lưu câu lệnh sql
+            if (tblSize.Rows.Count == 0)
+            {
+                MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtMaSize.Text == "") //nếu chưa chọn bản ghi nào
+            {
+                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtTenSize.Text.Trim().Length == 0) //nếu chưa nhập tên chất liệu
+            {
+                MessageBox.Show("Bạn chưa nhập tên chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            sql = "UPDATE tblSize SET TenSize=N'" +
+                txtTenSize.Text.ToString() +
+                "' WHERE idSize=N'" + txtMaSize.Text + "'";
+            DataProvider.Instance.ExecuteQuery(sql);
+            LoadDataGridView();
+            ResetValue();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            string sql;
+            if (tblSize.Rows.Count == 0)
+            {
+                MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtMaSize.Text == "") //nếu chưa chọn bản ghi nào
+            {
+                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                sql = "DELETE tblSize WHERE idSize=N'" + txtMaSize.Text + "'";
+                DataProvider.Instance.ExecuteQuery(sql);
+                LoadDataGridView();
+                ResetValue();
+            }
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

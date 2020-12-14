@@ -148,5 +148,91 @@ namespace ShopQuanAo100
         {
             this.Close();
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            string sql; //Lưu lệnh sql
+            if (txtMaChatLieu.Text.Trim().Length == 0) //Nếu chưa nhập mã chất liệu
+            {
+                MessageBox.Show("Bạn phải nhập mã chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaChatLieu.Focus();
+                return;
+            }
+            if (txtTenChatLieu.Text.Trim().Length == 0) //Nếu chưa nhập tên chất liệu
+            {
+                MessageBox.Show("Bạn phải nhập tên chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenChatLieu.Focus();
+                return;
+            }
+            sql = "Select idChatLieu From tblChatLieu where idChatLieu=N'" + txtMaChatLieu.Text.Trim() + "'";
+            if (DAO_ChatLieu.CheckKey(sql))
+            {
+                MessageBox.Show("Mã chất liệu này đã có, bạn phải nhập mã khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMaChatLieu.Focus();
+                return;
+            }
+
+            sql = "INSERT INTO tblChatLieu VALUES(N'" +
+                txtMaChatLieu.Text + "',N'" + txtTenChatLieu.Text + "')";
+            DataProvider.Instance.ExecuteQuery(sql); //Thực hiện câu lệnh sql
+            LoadDataGridView(); //Nạp lại DataGridView
+            ResetValue();
+
+            //txtMaChatLieu.Enabled = false;
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            string sql; //Lưu câu lệnh sql
+            if (tblCL.Rows.Count == 0)
+            {
+                MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtMaChatLieu.Text == "") //nếu chưa chọn bản ghi nào
+            {
+                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtTenChatLieu.Text.Trim().Length == 0) //nếu chưa nhập tên chất liệu
+            {
+                MessageBox.Show("Bạn chưa nhập tên chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            sql = "UPDATE tblChatLieu SET TenChatLieu=N'" +
+                txtTenChatLieu.Text.ToString() +
+                "' WHERE idChaTLieu=N'" + txtMaChatLieu.Text + "'";
+            DataProvider.Instance.ExecuteQuery(sql);
+            LoadDataGridView();
+            ResetValue();
+
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            string sql;
+            if (tblCL.Rows.Count == 0)
+            {
+                MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtMaChatLieu.Text == "") //nếu chưa chọn bản ghi nào
+            {
+                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                sql = "DELETE tblChatLieu WHERE idChatLieu=N'" + txtMaChatLieu.Text + "'";
+                DataProvider.Instance.ExecuteQuery(sql);
+                LoadDataGridView();
+                ResetValue();
+            }
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
