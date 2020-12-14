@@ -101,7 +101,7 @@
             // 
             this.cbbChatLieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbChatLieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbChatLieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbbChatLieu.ForeColor = System.Drawing.Color.Gainsboro;
             this.cbbChatLieu.FormattingEnabled = true;
             this.cbbChatLieu.Location = new System.Drawing.Point(1203, 372);
             this.cbbChatLieu.Margin = new System.Windows.Forms.Padding(4);
@@ -162,7 +162,7 @@
             // 
             this.cbbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbbSize.ForeColor = System.Drawing.Color.Gainsboro;
             this.cbbSize.FormattingEnabled = true;
             this.cbbSize.Location = new System.Drawing.Point(1371, 372);
             this.cbbSize.Margin = new System.Windows.Forms.Padding(4);
@@ -493,7 +493,7 @@
             this.cbbMaSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.cbbMaSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMaSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbbMaSP.ForeColor = System.Drawing.Color.Gainsboro;
             this.cbbMaSP.FormattingEnabled = true;
             this.cbbMaSP.Location = new System.Drawing.Point(1203, 215);
             this.cbbMaSP.Margin = new System.Windows.Forms.Padding(4);
@@ -545,7 +545,7 @@
             this.cbbMaNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.cbbMaNhanVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMaNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMaNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbbMaNhanVien.ForeColor = System.Drawing.Color.Gainsboro;
             this.cbbMaNhanVien.FormattingEnabled = true;
             this.cbbMaNhanVien.Location = new System.Drawing.Point(1203, 163);
             this.cbbMaNhanVien.Margin = new System.Windows.Forms.Padding(4);
@@ -629,6 +629,7 @@
             // 
             // dtpNgayBan
             // 
+            this.dtpNgayBan.CalendarMonthBackground = System.Drawing.SystemColors.HighlightText;
             this.dtpNgayBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayBan.Location = new System.Drawing.Point(1203, 62);
             this.dtpNgayBan.Margin = new System.Windows.Forms.Padding(4);
@@ -641,6 +642,7 @@
             this.btnexit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.btnexit.FlatAppearance.BorderSize = 0;
             this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnexit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.btnexit.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnexit.IconColor = System.Drawing.Color.Black;
             this.btnexit.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -658,6 +660,7 @@
             this.btnhuyHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.btnhuyHD.FlatAppearance.BorderSize = 0;
             this.btnhuyHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnhuyHD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.btnhuyHD.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnhuyHD.IconColor = System.Drawing.Color.Black;
             this.btnhuyHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -677,6 +680,7 @@
             this.btnthanhtoan.FlatAppearance.BorderSize = 0;
             this.btnthanhtoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnthanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthanhtoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.btnthanhtoan.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnthanhtoan.IconColor = System.Drawing.Color.Black;
             this.btnthanhtoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -695,6 +699,7 @@
             this.btnsua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.btnsua.FlatAppearance.BorderSize = 0;
             this.btnsua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.btnsua.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnsua.IconColor = System.Drawing.Color.Black;
             this.btnsua.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -713,6 +718,7 @@
             this.btnthem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.btnthem.FlatAppearance.BorderSize = 0;
             this.btnthem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnthem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.btnthem.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnthem.IconColor = System.Drawing.Color.Black;
             this.btnthem.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -731,6 +737,7 @@
             this.btnxoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.btnxoa.FlatAppearance.BorderSize = 0;
             this.btnxoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnxoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.btnxoa.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnxoa.IconColor = System.Drawing.Color.Black;
             this.btnxoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -748,6 +755,7 @@
             this.btnhuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.btnhuy.FlatAppearance.BorderSize = 0;
             this.btnhuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnhuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.btnhuy.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnhuy.IconColor = System.Drawing.Color.Black;
             this.btnhuy.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -777,7 +785,7 @@
             this.cbbSDTKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.cbbSDTKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSDTKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbSDTKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbbSDTKH.ForeColor = System.Drawing.Color.Gainsboro;
             this.cbbSDTKH.FormattingEnabled = true;
             this.cbbSDTKH.Location = new System.Drawing.Point(780, 58);
             this.cbbSDTKH.Margin = new System.Windows.Forms.Padding(4);

@@ -92,7 +92,7 @@
             this.btnXuatExcel.FlatAppearance.BorderSize = 0;
             this.btnXuatExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatExcel.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnXuatExcel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.btnXuatExcel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnXuatExcel.IconColor = System.Drawing.Color.Black;
             this.btnXuatExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -111,12 +111,12 @@
             this.btnReload.FlatAppearance.BorderSize = 0;
             this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReload.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.btnReload.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnReload.IconColor = System.Drawing.Color.Black;
             this.btnReload.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReload.IconSize = 16;
-            this.btnReload.Location = new System.Drawing.Point(556, 76);
+            this.btnReload.Location = new System.Drawing.Point(555, 71);
             this.btnReload.Margin = new System.Windows.Forms.Padding(4);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(100, 36);
