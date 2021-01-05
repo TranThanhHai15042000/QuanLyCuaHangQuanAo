@@ -93,6 +93,7 @@ namespace ShopQuanAo100
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+           
         }
 
         private void txtUseName_TextChanged(object sender, EventArgs e)
@@ -145,6 +146,16 @@ namespace ShopQuanAo100
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+             
+            
+            if (e.KeyCode == Keys.Enter)
+                {
+                login();
+                }
         }
     }
 }

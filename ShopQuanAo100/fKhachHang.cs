@@ -142,6 +142,7 @@ namespace ShopQuanAo100
             dgvKhachHang.Columns[2].HeaderText = "Địa chỉ";
             dgvKhachHang.Columns[3].HeaderText = "Điện thoại";
             dgvKhachHang.Columns[4].HeaderText = "Ngày sinh";
+       
             dgvKhachHang.Columns[0].Width = 130;
             dgvKhachHang.Columns[1].Width = 130;
             dgvKhachHang.Columns[2].Width = 200;
@@ -287,6 +288,13 @@ namespace ShopQuanAo100
 
         private void btnBoQua_Click_1(object sender, EventArgs e)
         {
+            ResetValues();
+            btnBoQua.Enabled = false;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
+            btnLuu.Enabled = false;
+            txtMaKhach.Enabled = false;
             ActivateButton(sender, RGBColors.color2);
         }
 
@@ -300,9 +308,38 @@ namespace ShopQuanAo100
 
         private void btnChuanTen_Click(object sender, EventArgs e)
         {
-            
-              
-            
+            if (txtTenKhach.Text == "")
+            {
+                MessageBox.Show("Bạn phải nhập tên khách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenKhach.Focus();
+                return;
+            }
+            else
+
+            {
+                string newname = txtTenKhach.Text.Trim().ToLower();
+                string kq = newname[0].ToString().ToUpper();
+                for (int i = 1; i < newname.Length; i++)
+                {
+
+                    if (newname[i] != ' ')
+                    {
+                        if (newname[i - 1] == ' ')
+                        {
+                            kq = kq;
+                        }
+                        else kq = kq + newname[i];
+                    }
+                    if (newname[i] == ' ')
+                    {
+                        kq = kq + ' ' + newname[i + 1].ToString().ToUpper();
+                    }
+                    //else  kq = kq + newname[i];
+                }
+                txtTenKhach.Text = kq;
+            }
+
+
         }
 
         private void dgvKhachHang_Click(object sender, EventArgs e)
@@ -339,24 +376,24 @@ namespace ShopQuanAo100
 
         private void txtTimKH_TextChanged(object sender, EventArgs e)
         {
-             if (cbbFind.Text == "MaKhach")
+             if (cbbFind.Text == "Mã khách")
             {
                 string qr1 = (" SELECT * FROM tblKhachHang WHERE idKhachHang like '%" + txtTimKH.Text.Trim() + "%' ");
                 dgvKhachHang.DataSource = DataProvider.Instance.ExecuteQuery(qr1);
 
             }
-            else if (cbbFind.Text == "TenKhach")
+            else if (cbbFind.Text == "Tên khách")
             {
                 string qr2 = (" SELECT*FROM tblKhachHang WHERE TenKhach like '%" + txtTimKH.Text.Trim() + "%' ");
                 dgvKhachHang.DataSource = DataProvider.Instance.ExecuteQuery(qr2);
             }
-            else if (cbbFind.Text == "SDT")
+            else if (cbbFind.Text == "Số điện thoại")
             {
                 string qr3 = (" SELECT * FROM tblKhachHang WHERE DienThoai like '%" + txtTimKH.Text.Trim() + "%' ");
                 dgvKhachHang.DataSource = DataProvider.Instance.ExecuteQuery(qr3);
 
             }
-            else if (cbbFind.Text == "NgaySinh")
+            else if (cbbFind.Text == "Ngày Sinh")
             {
                 string qr4 = (" SELECT*FROM tblKhachHang WHERE NgaySinh like '%" + txtTimKH.Text.Trim() + "%' ");
                 dgvKhachHang.DataSource = DataProvider.Instance.ExecuteQuery(qr4);
@@ -405,6 +442,11 @@ namespace ShopQuanAo100
                 }
                 txtTenKhach.Text = kq;
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

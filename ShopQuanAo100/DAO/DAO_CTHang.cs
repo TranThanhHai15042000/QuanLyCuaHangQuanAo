@@ -71,7 +71,7 @@ namespace ShopQuanAo100.DAO
             SqlDataReader rdr = null;
 
             // create a connection object
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-D8S4ML5\SQLEXPRESS;Initial Catalog=QLQA_Main;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(DataProvider.Con());
 
             // create a command object
             SqlCommand cmd = new SqlCommand(

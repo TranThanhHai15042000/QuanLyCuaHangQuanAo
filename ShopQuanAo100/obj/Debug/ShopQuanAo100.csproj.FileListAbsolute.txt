@@ -64,3 +64,141 @@ C:\Users\PC\Desktop\git_clone\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQu
 C:\Users\PC\Desktop\git_clone\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\PC\Desktop\git_clone\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.CopyComplete
 C:\Users\PC\Desktop\git_clone\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csprojAssemblyReference.cache
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.exe.config
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.exe
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.pdb
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csprojAssemblyReference.cache
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.ResolveComReference.cache
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fBill.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fChatLieu.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHangNKHo.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHangTonKho.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fKhachHang.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fListBill.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fLogin.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fNhanVien.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fMains.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fSetting.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fSize.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fThongKeDoanhThu.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.Properties.Resources.resources
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.GenerateResource.cache
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.CoreCompileInputs.cache
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.CopyComplete
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.exe
+C:\Users\vip\Desktop\New folder\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.pdb
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.exe.config
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.exe
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.pdb
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csprojAssemblyReference.cache
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.ResolveComReference.cache
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fBill.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fChatLieu.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHangNKHo.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHangTonKho.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fKhachHang.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fListBill.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fLogin.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fNhanVien.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fMains.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fSetting.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fSize.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fThongKeDoanhThu.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.Properties.Resources.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.GenerateResource.cache
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.CoreCompileInputs.cache
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.CopyComplete
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.exe
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.pdb
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.ChartSLSP.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.ChartMoney.resources
+C:\Users\vip\Desktop\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.ChartSPHet.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.exe
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.pdb
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.ResolveComReference.cache
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.ChartSLSP.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.ChartMoney.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.ChartSPHet.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fBill.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fChatLieu.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHangNKHo.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHangTonKho.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fKhachHang.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fListBill.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fLogin.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fNhanVien.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fMains.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fSetting.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fSize.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fThongKeDoanhThu.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.Properties.Resources.resources
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.exe.config
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.exe
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.pdb
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\PC\Desktop\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.CopyComplete
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.exe.config
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.exe
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.pdb
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csprojAssemblyReference.cache
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.ResolveComReference.cache
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.ChartSLSP.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.ChartMoney.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.ChartSPHet.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fBill.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fChatLieu.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHangNKHo.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHangTonKho.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fKhachHang.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fListBill.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fLogin.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fNhanVien.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fMains.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fSetting.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fSize.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fThongKeDoanhThu.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.Properties.Resources.resources
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.GenerateResource.cache
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.CoreCompileInputs.cache
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.CopyComplete
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.exe
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.pdb
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\QLQA_Main.mdf
+C:\Users\vip\Desktop\QLQA_New\QLQA\QLQA\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\QLQA_Main_log.ldf
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\QLQA_Main.mdf
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\QLQA_Main_log.ldf
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.exe.config
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.exe
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\ShopQuanAo100.pdb
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csprojAssemblyReference.cache
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.ResolveComReference.cache
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.ChartSLSP.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.ChartMoney.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.ChartSPHet.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fAddKH.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fBill.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fChatLieu.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHangNKHo.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fCTHangTonKho.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fKhachHang.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fListBill.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fLogin.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fMail.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fNhanVien.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fMains.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fSetting.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fSize.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.fThongKeDoanhThu.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.Properties.Resources.resources
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.GenerateResource.cache
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.CoreCompileInputs.cache
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.csproj.CopyComplete
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.exe
+C:\Users\vip\Desktop\QuanLyCuaHangQuanAo\ShopQuanAo100\obj\Debug\ShopQuanAo100.pdb

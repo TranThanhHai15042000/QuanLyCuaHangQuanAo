@@ -17,6 +17,7 @@ namespace ShopQuanAo100
     {
         DataTable tblNV;
         DataTable tblKH;
+        DataTable tblCuaHang;
         public fSetting()
         {
            // InitializeComponent();
@@ -38,13 +39,15 @@ namespace ShopQuanAo100
         {
             gridviewNhanVien();
             gridviewKhachHang();
+            LoadThongTinCuaHang();
+           
         }
 
         public void gridviewNhanVien()
         {
             //data grid view nhan vien
             string sql;
-            sql = "SELECT * FROM dbo.tblNhanVien";
+            sql = "SELECT * FROM dbo.tblNhanVien  EXCEPT SELECT* FROM dbo.tblNhanVien WHERE Users = 'admin'";
             tblNV = DataProvider.Instance.ExecuteQuery(sql);
             dataGridViewNV.DataSource = tblNV; //Hiển thị vào dataGridView
 
@@ -88,8 +91,23 @@ namespace ShopQuanAo100
             dataGridViewKH.Columns[4].Width = 300;
             dataGridViewKH.AllowUserToAddRows = false;        // Không cho người dùng thêm dữ liệu trực tiếp
             dataGridViewKH.EditMode = DataGridViewEditMode.EditProgrammatically;      //Không cho sửa dữ liệu trực tiếp
+         
         }
 
+        private void LoadThongTinCuaHang()
+        {
+
+            string sql = "select * from tblThongTinShop where id = 1 ";
+            tblCuaHang = DataProvider.Instance.ExecuteQuery(sql);
+
+            txtTenShop.Text = tblCuaHang.Rows[0]["TenShop"].ToString();
+            txtDiaChi.Text = tblCuaHang.Rows[0]["Diachi"].ToString();
+            txtSDT.Text = tblCuaHang.Rows[0]["SDT"].ToString();
+            txtLoiChao.Text = tblCuaHang.Rows[0]["LoiChao"].ToString();
+
+
+
+        }
 
 
 
@@ -100,7 +118,7 @@ namespace ShopQuanAo100
 
         private void fSetting_Load(object sender, EventArgs e)
         {
-           
+            LoadThongTinCuaHang();
         }
 
         public void ResetValues()
@@ -113,8 +131,7 @@ namespace ShopQuanAo100
         }
         private void btnButtonChooseIMG_Click(object sender, EventArgs e)
         {
-            DAO_Setting.GetAnh(pictureBox1, imglogoloc);
-            
+            DAO.DAO_Setting.GetAnh(pictureBox1 , imglogoloc);
         }
 
         private void SaveIMGlogo_Click(object sender, EventArgs e)
@@ -124,6 +141,11 @@ namespace ShopQuanAo100
         }
 
         private void BtnSaveThongtin_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void BtnSaveThongtin_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtTenShop.Text))
             {
@@ -144,33 +166,26 @@ namespace ShopQuanAo100
             }
             else
             {
-               
+                try
+                {
+
+                    //Chèn thêm
+                    string sql = "UPDATE tblThongTinShop SET Tenshop=N'" + txtTenShop.Text+ "',DiaChi=N'" +
+                    txtDiaChi.Text+ "',SDT='" + txtSDT.Text + "',LoiChao=N'" + txtLoiChao.Text + "'WHERE id= 1";
+                    //Functions.RunSQL(sql);
+
+                    DataProvider.Instance.ExecuteQuery(sql);
+                    LoadDataGridView();
+                  //  ResetValues();
+
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Lưu thất bại", "Thông báo");
+                }
             }
-        }
-
-        private void BtnSaveThongtin_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                //Kiểm tra tồn tại mã khách 
-
-
-
-                //Chèn thêm
-                string sql = sql = "UPDATE tblThongTinShop SET Tenshop=N'" + txtTenShop.Text.Trim().ToString() + "',DiaChi=N'" +
-                txtDiaChi.Text.Trim().ToString() + "',SDT='" + txtSDT.Text.ToString() + "',LoiChao=N'" + txtLoiChao.Text.Trim().ToString() + "WHERE id= 1"; 
-                //Functions.RunSQL(sql);
-
-                DataProvider.Instance.ExecuteQuery(sql);
-                LoadDataGridView();
-                ResetValues();
-
-             
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Thêm thất bại", "Thông báo");
-            }
+           
         }
 
         private void btnChiTietKhachHang_Click(object sender, EventArgs e)
@@ -184,9 +199,46 @@ namespace ShopQuanAo100
         private void btnChiTietNhanVien_Click(object sender, EventArgs e)
         {
             fNhanVien f = new fNhanVien();
+           
             this.Hide();
             f.ShowDialog();
             this.Show();
+        }
+
+        private void SaveIMGlogo_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                byte[] img = null;
+                FileStream fs = new FileStream(imglogoloc, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
+                using (var cmd = new SqlCommand("update tblThongTinShop set logo=@logo where ID=1"))
+                {
+                    cmd.Connection = DataProvider.getConnection();
+                    cmd.Parameters.AddWithValue("@logo", img);
+                    DataProvider.getConnection().Open();
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Đã lưu");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lưu không thành công!");
+                    }
+                    DataProvider.getConnection().Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                DataProvider.getConnection().Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dataGridViewKH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

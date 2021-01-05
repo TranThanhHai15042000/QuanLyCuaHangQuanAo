@@ -11,6 +11,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using COMExcel = Microsoft.Office.Interop.Excel;
+
+
 
 namespace ShopQuanAo100
 {
@@ -78,25 +81,32 @@ namespace ShopQuanAo100
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string sql;
-            if (tblH.Rows.Count == 0)
+            try
             {
-                MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                string sql;
+                if (tblH.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (txtMaCTHang.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (MessageBox.Show("Bạn có muốn xoá bản ghi này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    sql = "DELETE tblCT_Hang WHERE idCTHang=N'" + txtMaCTHang.Text + "'";
+                    DataProvider.Instance.ExecuteQuery(sql);
+                    LoadDataGridView();
+                    ResetValues();
+                }
             }
-            if (txtMaCTHang.Text == "")
+                catch(Exception )
             {
-                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            if (MessageBox.Show("Bạn có muốn xoá bản ghi này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                sql = "DELETE tblCT_Hang WHERE idCTHang=N'" + txtMaCTHang.Text + "'";
-                DataProvider.Instance.ExecuteQuery(sql);
-                LoadDataGridView();
-                ResetValues();
-            }
-            ActivateButton(sender, RGBColors.color2);
+                MessageBox.Show( "Lỗi");
+            }    
+            ActivateButton(sender, RGBColors.color5);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -127,38 +137,53 @@ namespace ShopQuanAo100
                 return;
             }
 
+            try
+            {
 
-            sql = "UPDATE tblCT_Hang SET Ten=N'" + txtTen.Text.Trim().ToString() +
-                "',idSize=N'" + cbbSize.Text.Trim().ToString() +
-                 "',KieuDang=N'" + txtKieuDang.Text.Trim().ToString() +
-                "',idChatLieu=N'" + cbbChatLieu.Text.Trim().ToString() +
-                 // "',GhiChu=N'" + txtGhiChu.Text.Trim().ToString() +
-                      "',Soluong=N'" + txtSoLuong.Text.Trim().ToString() +
-                "',DongiaNhap=N'" + txtDonGiaNhap.Text.Trim().ToString() +
-                  "',DongiaBan=N'" + txtDonGiaBan.Text.Trim().ToString() +
-              /*  ",Anh=N'" + txtAnh.Text + */ "' WHERE idCTHang=N'" + txtMaCTHang.Text + "'";
+                sql = "UPDATE tblCT_Hang SET Ten=N'" + txtTen.Text.Trim().ToString() +
+                    "',idSize=N'" + cbbSize.SelectedValue.ToString() +
+                     "',KieuDang=N'" + txtKieuDang.Text.Trim().ToString() +
+                    "',idChatLieu=N'" + cbbChatLieu.SelectedValue.ToString() +
+                     // "',GhiChu=N'" + txtGhiChu.Text.Trim().ToString() +
+                          "',Soluong=N'" + txtSoLuong.Text.Trim().ToString() +
+                    "',DongiaNhap=N'" + txtDonGiaNhap.Text.Trim().ToString() +
+                      "',DongiaBan=N'" + txtDonGiaBan.Text.Trim().ToString() +
+                  /*  ",Anh=N'" + txtAnh.Text + */ "' WHERE idCTHang=N'" + txtMaCTHang.Text + "'";
 
-            //sql = "UPDATE tblKhachHang SET TenKhach=N'" + txtTenKhach.Text.Trim().ToString() + "',DiaChi=N'" +
-            //       txtDiaChiKH.Text.Trim().ToString() + "',DienThoai='" + mtbSDTKhach.Text.ToString() + "',NgaySinh=N'" + dateTimeSNKH.Value.ToString() + "' WHERE idKhachHang=N'" + txtMaKhach.Text + "'";
-            DataProvider.Instance.ExecuteQuery(sql);
-            LoadDataGridView();
-            ResetValues();
-            btnBoQua.Enabled = false;
-            ActivateButton(sender, RGBColors.color3);
+                //sql = "UPDATE tblKhachHang SET TenKhach=N'" + txtTenKhach.Text.Trim().ToString() + "',DiaChi=N'" +
+                //       txtDiaChiKH.Text.Trim().ToString() + "',DienThoai='" + mtbSDTKhach.Text.ToString() + "',NgaySinh=N'" + dateTimeSNKH.Value.ToString() + "' WHERE idKhachHang=N'" + txtMaKhach.Text + "'";
+                DataProvider.Instance.ExecuteQuery(sql);
+                LoadDataGridView();
+                ResetValues();
+                btnBoQua.Enabled = false;
+                ActivateButton(sender, RGBColors.color4);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lỗi");
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string idCTHang = txtMaCTHang.Text.Trim();
             string TenHang = txtTen.Text.Trim();
-            //string KieuDang = txtKieuDang.Text.Trim();
-            //string ChatLieu = txtChatLieu.Text.Trim();
-            //string GhiChu = txtGhiChu.Text.Trim();
-            //string Size = txtSize.Text.Trim();
-            //byte[] Anh = ImmagetoByteArray(picAnh.Image);
+            string KieuDang = txtKieuDang.Text.Trim();
+
+
+            string ChatLieu = cbbChatLieu.SelectedValue.ToString();
+            string Size = cbbSize.SelectedValue.ToString();
+
+
+         //   string GhiChu = txtGhiChu.Text.Trim();
+
+            byte[] Anh = ImmagetoByteArray(picAnh.Image);
             string soluong = txtSoLuong.Text.Trim();
             string dongianhap = txtDonGiaNhap.Text.Trim();
             string dongiaban = txtDonGiaBan.Text.Trim();
+            string ngaynhap = dtbNgayNhap.Value.ToString();
+            //  string day = g
 
             if (txtMaCTHang.Text.Trim().Length == 0)
             {
@@ -172,49 +197,49 @@ namespace ShopQuanAo100
                 txtTen.Focus();
                 return;
             }
-            //if (txtKieuDang.Text.Trim().Length == 0)
-            //{
-            //    MessageBox.Show("Bạn phải nhập kiểu dáng của hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txtKieuDang.Focus();
-            //    return;
-            //}
-            //if (txtChatLieu.Text.Trim().Length == 0)
-            //{
-            //    MessageBox.Show("Bạn phải nhập chất liệu hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txtChatLieu.Focus();
-            //    return;
-            //}
+            if (txtKieuDang.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập kiểu dáng của hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtKieuDang.Focus();
+                return;
+            }
+            if (cbbChatLieu.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập chất liệu hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cbbChatLieu.Focus();
+                return;
+            }
 
-            //if (txtSize.Text.Trim().Length == 0)
-            //{
-            //    MessageBox.Show("Bạn phải chọn size hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txtSize.Focus();
-            //    return;
-            //}
-            //if (txtSoLuong.Text.Trim().Length == 0)
-            //{
-            //    MessageBox.Show("Bạn phải nhập mã hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txtMaCTHang.Focus();
-            //    return;
-            //}
-            //if (txtDonGiaNhap.Text.Trim().Length == 0)
-            //{
-            //    MessageBox.Show("Bạn phải nhập tên hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txtTen.Focus();
-            //    return;
-            //}
-            //if (txtDonGiaBan.Text.Trim().Length == 0)
-            //{
-            //    MessageBox.Show("Bạn phải nhập kiểu dáng của hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txtKieuDang.Focus();
-            //    return;
-            //}
-            //if (picAnh.Image == null)
-            //{
-            //    MessageBox.Show("Bạn phải chọn ảnh cho hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txtKieuDang.Focus();
-            //    return;
-            //}
+            if (cbbSize.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải chọn size hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cbbSize.Focus();
+                return;
+            }
+            if (txtSoLuong.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập mã hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaCTHang.Focus();
+                return;
+            }
+            if (txtDonGiaNhap.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập tên hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTen.Focus();
+                return;
+            }
+            if (txtDonGiaBan.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập kiểu dáng của hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtKieuDang.Focus();
+                return;
+            }
+            if (picAnh.Image == null)
+            {
+                MessageBox.Show("Bạn phải chọn ảnh cho hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtKieuDang.Focus();
+                return;
+            }
 
 
             string sql;
@@ -230,7 +255,8 @@ namespace ShopQuanAo100
 
                 SqlConnection conn = DataProvider.getConnection();
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO tblCT_Hang VALUES  ( @idcthang ,@Ten ,@Size , @KieuDang , @ChatLieu ,@GhiChu, @Anh,@soluong,@dongianhap,@dongiaban)", conn);
+                sql = "INSERT INTO tblCT_Hang VALUES  ( @idcthang ,@Ten ,@idSize , @KieuDang , @idChatLieu ,@GhiChu, @Anh,@soluong,@dongianhap,@dongiaban,@ngaynhap)";
+                SqlCommand cmd = new SqlCommand(sql, conn);
 
 
 
@@ -238,33 +264,35 @@ namespace ShopQuanAo100
 
                 cmd.Parameters.Add("@idcthang", idCTHang);
                 cmd.Parameters.Add("@Ten", TenHang);
-                cmd.Parameters.Add("@Size", Size);
-              //  cmd.Parameters.Add("@KieuDang", KieuDang);
-                //cmd.Parameters.Add("@ChatLieu", ChatLieu);
-                //cmd.Parameters.Add("@GhiChu", GhiChu);
-                //cmd.Parameters.Add("@Anh", Anh);
+                cmd.Parameters.Add("@idSize", Size);
+                cmd.Parameters.Add("@KieuDang", KieuDang);
+                cmd.Parameters.Add("@idChatLieu", ChatLieu);
+            //    cmd.Parameters.Add("@GhiChu", GhiChu);
+                cmd.Parameters.Add("@Anh", Anh);
 
                 cmd.Parameters.Add("@soluong", soluong);
                 cmd.Parameters.Add("@dongianhap", dongianhap);
                 cmd.Parameters.Add("@dongiaban", dongiaban);
+                cmd.Parameters.Add("@ngaynhap", ngaynhap);
                 cmd.ExecuteNonQuery();
                 conn.Close();
 
 
 
 
-                DataProvider.Instance.ExecuteQuery(sql);
+                //  DataProvider.Instance.ExecuteQuery(sql);
                 LoadDataGridView();
-                //ResetValues();
+                ResetValues();
                 btnXoa.Enabled = true;
+               // btnThem.Enabled = true;
                 btnSua.Enabled = true;
                 btnBoQua.Enabled = false;
                 btnLuu.Enabled = false;
-                txtTen.Enabled = false;
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Exception");
+                MessageBox.Show("Error during update: " + ex.Message);
             }
             ActivateButton(sender, RGBColors.color4);
         }
@@ -272,7 +300,7 @@ namespace ShopQuanAo100
         private void LoadDataGridView()
         {
             string sql;
-            sql = "SELECT * from tblCT_Hang";
+            sql = "SELECT ct.idCTHang, ct.ten, s.Ten,ct.kieudang,cl.tenChatLieu,ct.anh,ct.Soluong,ct.DonGiaNhap,ct.DonGiaBan,ct.ghichu FROM dbo.tblChatLieu cl JOIN dbo.tblCT_Hang ct ON ct.idChatLieu = cl.idChatLieu JOIN dbo.tblSize s ON s.idSize = ct.idSize WHERE (MONTH(GETDATE()) != MONTH(ct.NgayNhap))";
             tblH = DataProvider.Instance.ExecuteQuery(sql);
             dgvHang.DataSource = tblH;
             dgvHang.Columns[0].HeaderText = "Mã hàng";
@@ -280,16 +308,18 @@ namespace ShopQuanAo100
             dgvHang.Columns[2].HeaderText = "Size";
             dgvHang.Columns[3].HeaderText = "Kiểu Dáng";
             dgvHang.Columns[4].HeaderText = "Chất Liệu";
-            dgvHang.Columns[5].HeaderText = "Ghi Chú";
-            dgvHang.Columns[6].HeaderText = "Ảnh";
-            dgvHang.Columns[7].HeaderText = "Số Lượng";
-            dgvHang.Columns[8].HeaderText = "Đơn giá nhập";
-            dgvHang.Columns[9].HeaderText = "Đơn giá bán";
+          
+            dgvHang.Columns[5].HeaderText = "Ảnh";
+            dgvHang.Columns[6].HeaderText = "Số Lượng";
+            dgvHang.Columns[7].HeaderText = "Đơn giá nhập";
+            dgvHang.Columns[8].HeaderText = "Đơn giá bán";
+            dgvHang.Columns[9].HeaderText = "Ghi chú";
             dgvHang.Columns[0].Width = 80;
             dgvHang.Columns[1].Width = 100;
             dgvHang.Columns[2].Width = 80;
             dgvHang.Columns[3].Width = 80;
             dgvHang.Columns[4].Width = 100;
+           
             dgvHang.Columns[5].Width = 100;
             dgvHang.Columns[6].Width = 100;
             dgvHang.Columns[7].Width = 100;
@@ -308,9 +338,9 @@ namespace ShopQuanAo100
             txtMaCTHang.Text = "";
             txtTen.Text = "";
             // cboMaChatLieu.Text = "";
-            //txtSize.Text = "";
-            //txtKieuDang.Text = "";
-            //txtChatLieu.Text = "";
+            cbbSize.Text  = "";
+            txtKieuDang.Text = "";
+            cbbChatLieu.Text = "";
             txtSoLuong.Text = "";
             txtDonGiaNhap.Text = "";
             txtDonGiaBan.Text = "";
@@ -326,9 +356,9 @@ namespace ShopQuanAo100
 
 
             // lấy dữ liệu size
-            DataTable size = DAO_Bill.GetData("SELECT idSize, Tensize FROM tblSize");
+            DataTable size = DAO_Bill.GetData("SELECT idSize, Ten FROM tblSize");
             cbbSize.DataSource = size;
-            cbbSize.DisplayMember = "Tensize";
+            cbbSize.DisplayMember = "Ten";
             cbbSize.ValueMember = "idSize";
 
             // lấy dữ liệu chất liệu
@@ -346,7 +376,7 @@ namespace ShopQuanAo100
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             string sql;
-            if ((txtMaCTHang.Text == "") && (txtTen.Text == "") && (cbbSize.Text == "") && (cbbChatLieu.Text == "") && (txtKieuDang.Text == ""))
+            if ((txtMaCTHang.Text == "") && (txtTen.Text == "") && (cbbSize.Text == "") && (cbbChatLieu.Text == "") && (txtKieuDang.Text == "") )
             {
                 MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -357,11 +387,11 @@ namespace ShopQuanAo100
             if (txtTen.Text != "")
                 sql += " AND Ten LIKE N'%" + txtTen.Text + "%'";
             if (cbbSize.Text != "")
-                sql += " AND idSize LIKE N'%" + cbbSize.Text + "%'";
+                sql += " AND idSize LIKE N'%" + cbbSize.SelectedValue.ToString() + "%'";
             if (txtKieuDang.Text != "")
                 sql += " AND KieuDang LIKE N'%" + txtKieuDang.Text + "%'";
             if (cbbChatLieu.Text != "")
-                sql += " AND idChatLieu LIKE N'%" + cbbChatLieu.Text + "%'";
+                sql += " AND idChatLieu LIKE N'%" + cbbChatLieu.SelectedValue.ToString() + "%'";
            
 
 
@@ -372,16 +402,14 @@ namespace ShopQuanAo100
             else MessageBox.Show("Có " + tblH.Rows.Count + "  bản ghi thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvHang.DataSource = tblH;
             ResetValues();
-            ActivateButton(sender, RGBColors.color5);
+            ActivateButton(sender, RGBColors.color4);
         }
 
         private void btnHienThi_Click(object sender, EventArgs e)
         {
-            string sql;
-            sql = "SELECT * FROM tblCT_Hang";
-            tblH = DAO_CTHang.GetDataToTable(sql);
-            dgvHang.DataSource = tblH;
-            ActivateButton(sender, RGBColors.color6);
+            LoadDataGridView();
+          
+            ActivateButton(sender, RGBColors.color5);
         }
 
         private void btnBoQua_Click(object sender, EventArgs e)
@@ -393,7 +421,7 @@ namespace ShopQuanAo100
             btnSua.Enabled = true;
             btnLuu.Enabled = false;
             txtMaCTHang.Enabled = false;
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.color5);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -403,37 +431,37 @@ namespace ShopQuanAo100
 
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            //// creating Excel Application  
-            //Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
-            //// creating new WorkBook within Excel application  
-            //Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
-            //// creating new Excelsheet in workbook  
-            //Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-            //// see the excel sheet behind the program  
-            //app.Visible = true;
-            //// get the reference of first sheet. By default its name is Sheet1.  
-            //// store its reference to worksheet  
-            //worksheet = workbook.Sheets["Sheet1"];
-            //worksheet = workbook.ActiveSheet;
-            //// changing the name of active sheet  
-            //worksheet.Name = "Exported from gridview";
-            //// storing header part in Excel  
-            //for (int i = 1; i < dgvHang.Columns.Count + 1; i++)
-            //{
-            //    worksheet.Cells[1, i] = dgvHang.Columns[i - 1].HeaderText;
-            //}
-            //// storing Each row and column value to excel sheet  
-            //for (int i = 0; i < dgvHang.Rows.Count; i++)
-            //{
-            //    for (int j = 0; j < dgvHang.Columns.Count; j++)
-            //    {
-            //        worksheet.Cells[i + 2, j + 1] = dgvHang.Rows[i].Cells[j].Value.ToString();
-            //    }
-            //}
-            //// save the application  
-            ////  workbook.SaveAs("C:\\Users\\lionel\\Desktop\\Test\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-            //// Exit from the application  
-            ////  app.Quit(); 
+            // creating Excel Application  
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            // creating new WorkBook within Excel application  
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            // creating new Excelsheet in workbook  
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            // see the excel sheet behind the program  
+            app.Visible = true;
+            // get the reference of first sheet. By default its name is Sheet1.  
+            // store its reference to worksheet  
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            // changing the name of active sheet  
+            worksheet.Name = "Exported from gridview";
+            // storing header part in Excel  
+            for (int i = 1; i < dgvHang.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = dgvHang.Columns[i - 1].HeaderText;
+            }
+            // storing Each row and column value to excel sheet  
+            for (int i = 0; i < dgvHang.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvHang.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = dgvHang.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            // save the application  
+            //  workbook.SaveAs("C:\\Users\\lionel\\Desktop\\Test\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            // Exit from the application  
+            //  app.Quit(); 
         }
 
         private void dgvHang_Click(object sender, EventArgs e)
@@ -451,8 +479,8 @@ namespace ShopQuanAo100
             txtMaCTHang.Text = dgvHang.CurrentRow.Cells["idCTHang"].Value.ToString();
             txtTen.Text = dgvHang.CurrentRow.Cells["Ten"].Value.ToString();
             txtKieuDang.Text = dgvHang.CurrentRow.Cells["KieuDang"].Value.ToString();
-            cbbChatLieu.Text = dgvHang.CurrentRow.Cells["idChatLieu"].Value.ToString();
-            cbbSize.Text = dgvHang.CurrentRow.Cells["idSize"].Value.ToString();
+            cbbChatLieu.Text = dgvHang.CurrentRow.Cells["TenChatLieu"].Value.ToString();
+            cbbSize.Text = dgvHang.CurrentRow.Cells["Ten1"].Value.ToString();
            // txtGhiChu.Text = dgvHang.CurrentRow.Cells["GhiChu"].Value.ToString();
 
 
@@ -531,6 +559,104 @@ namespace ShopQuanAo100
                 DataProvider.getConnection().Close();
                 MessageBox.Show("Error during insert: " + ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // creating Excel Application  
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            // creating new WorkBook within Excel application  
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            // creating new Excelsheet in workbook  
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            // see the excel sheet behind the program  
+            app.Visible = true;
+            // get the reference of first sheet. By default its name is Sheet1.  
+            // store its reference to worksheet  
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;  
+            // changing the name of active sheet  
+            worksheet.Name = "Exported from gridview";
+            // storing header part in Excel  
+            for (int i = 1; i < dgvHang.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i+3] = dgvHang.Columns[i - 1].HeaderText;
+            }
+            // storing Each row and column value to excel sheet  
+            for (int i = 0; i < dgvHang.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvHang.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 5, j + 1] = dgvHang.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            // save the application  
+            //  workbook.SaveAs("C:\\Users\\lionel\\Desktop\\Test\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            // Exit from the application  
+            //  app.Quit();
+        }
+
+        private void picAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                picAnh.Image = Image.FromFile(open.FileName);
+                this.Text = open.FileName;
+            }
+        }
+
+        private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtDonGiaNhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtDonGiaBan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtTen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSoLuong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDonGiaNhap_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDonGiaBan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtKieuDang_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaCTHang_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbChatLieu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

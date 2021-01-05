@@ -52,7 +52,7 @@ namespace ShopQuanAo100.DAO
         {
             SqlDataAdapter dap = new SqlDataAdapter(sql, DataProvider.getConnection());
             DataTable table = new DataTable();
-            //dap.Fill(table);
+            dap.Fill(table);
             if (table.Rows.Count > 0)
                 return true;
             return false;

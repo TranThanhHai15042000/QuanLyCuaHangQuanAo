@@ -54,14 +54,14 @@ namespace ShopQuanAo100
         private Panel lefborderbtn;
         private Form currentchildform;
 
-    
+
 
         public fMains(DTO_Account acc)
         {
             InitializeComponent();
             this.LoginAccount = acc;
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 60);
+            leftBorderBtn.Size = new Size(7, 62);
             panelMenu.Controls.Add(leftBorderBtn);
             timer1.Start();//dong ho
             //Form
@@ -158,6 +158,7 @@ namespace ShopQuanAo100
         }
         private void Reset()
         {
+
             DisableButton();
             leftBorderBtn.Visible = false;
             iconCurrentChildForm.IconChar = IconChar.Home;
@@ -175,7 +176,7 @@ namespace ShopQuanAo100
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         private void iconButton2_Click(object sender, EventArgs e)
-        {  
+        {
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new fListBill());
         }
@@ -294,7 +295,7 @@ namespace ShopQuanAo100
         {
 
         }
-
+                
         private void btnHome_Click(object sender, EventArgs e)
         {
             if (currentChildForm != null)
@@ -311,9 +312,9 @@ namespace ShopQuanAo100
 
         private void btnExit_Click_1(object sender, EventArgs e)
         {
-            
+
             this.Close();
-           
+
         }
 
         private void btnMaximize_Click_1(object sender, EventArgs e)
@@ -322,13 +323,13 @@ namespace ShopQuanAo100
                 WindowState = FormWindowState.Maximized;
             else
                 WindowState = FormWindowState.Normal;
-            
+
         }
 
         private void btnMinimize_Click_1(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-         
+
         }
 
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
@@ -345,7 +346,7 @@ namespace ShopQuanAo100
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime datetime = DateTime.Now;
-            this.lbDateTime.Text = datetime.ToString("dd/MM/yyyy HH:mm:ss");
+            //this.lbDateTime.Text = datetime.ToString("dd/MM/yyyy HH:mm:ss");
             this.labelGioBig.Text = datetime.ToString("HH:mm:ss");
             this.lbNgayThangBig.Text = datetime.ToString("dd/MM/yyyy");
             this.lbDateBig.Text = datetime.ToString("dddd");
@@ -356,15 +357,15 @@ namespace ShopQuanAo100
 
         }
 
-        
 
-      
 
-     
+
+
+
 
         private void iconButtonSP_Click_2(object sender, EventArgs e)
         {
-            if (PanelDropDownSP.Height == 170)
+            if (PanelDropDownSP.Height == 2170)
             {
                 PanelDropDownSP.Height = 50;
             }
@@ -393,6 +394,65 @@ namespace ShopQuanAo100
         }
 
         private void PanelDropDownSP_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void iconButtonSP_Click(object sender, EventArgs e)
+        {
+            if (PanelDropDownSP.Height == 170)
+            {
+                PanelDropDownSP.Height = 50;
+            }
+            else
+            {
+                PanelDropDownSP.Height = 210;
+
+            }
+        }
+
+        private void btnChatLieu_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            OpenChildForm(new fChatLieu());
+        }
+
+        private void btnSize_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color4);
+            OpenChildForm(new fSize());
+        }
+
+        private void iconButton9_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void LabelUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelGioBig_Click(object sender, EventArgs e)
         {
 
         }
